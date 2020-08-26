@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col-sm-8 ">
+    <h1 class="display-4">Forfattere i Bookstore</h1>
+    <p class="lead">
+      <a class="btn btn-primary btn-sm" href="/bookstore" role="button">Retur til Bookstore</a>
+    </p>
+    <p class="lead">Et udvalg af forfattere</p>
+  </div>
+  <div class="col-sm-8 border rounded">
+    <table id="data" class="table table-sm" >
+      {{#each authors}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td><a href="/bookstore/authors/{{this.id}}">{{this.firstname}}</a></td>
+          <td>{{this.lastname}}</td>
+          <td>{{this.mail}}</td>
+        </tr>
+
+      {{/each}}
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": ["es2019"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2019",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

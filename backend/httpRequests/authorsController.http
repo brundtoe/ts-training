@@ -1,0 +1,65 @@
+// genstart appen før hvert gennemløb for at nulstille databasen
+
+GET http://localhost:3000/bookstore/authors/7
+Accept: application/json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is json", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+
+client.test("Response author is Andrew Enfield", function() {
+  var author =  {
+    id: 7,
+    firstname: "Andrew",
+    lastname: "Enfield",
+    mail: "Enfield@mail.com"
+  }
+  client.log(response.body.data.author.mail)
+  client.assert(response.body.data.author.mail == author.mail, "expected autor to be" + author.mail)
+})
+
+
+%}
+###
+
+DELETE http://localhost:3000/bookstore/authors/7
+Accept: application/json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is json", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+%}
+
+###
+PUT http://localhost:3000/bookstore/authors
+Content-Type: application/json
+
+{
+    "id": 9,
+    "firstname": "Sofie",
+    "lastname": "Hansen",
+    "mail": "Matsik@mail.com"
+}
+
+###
+POST http://localhost:3000/bookstore/authors
+Content-Type: application/json
+
+{
+  "id": 0,
+  "firstname": "Cecilie",
+  "lastname": "Nielsen",
+  "mail": "cecilie@mail.com"
+}

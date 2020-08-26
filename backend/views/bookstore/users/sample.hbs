@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-sm-8">
+    <h1 class="display-4">Alle kunder</h1>
+    <p class="lead">
+      <a class="btn btn-primary btn-sm" href="/bookstore" role="button">Retur til Bookstore</a>
+    </p>
+    <p class="lead">Alle kunder</p>
+  </div>
+  <div class="col-sm-8 border rounded">
+    <table id="customers" class="table table-sm">
+
+      {{#each users}}
+        <tr>
+        <td>{{this.id}}</td>
+          <td><a href="/bookstore/users/{{this.id}}">{{this.name}}</a></td>
+        <td>{{this.city}}</td>
+        <td>{{this.state}}</td>
+        <td>{{this.mail}}</td>
+        </tr>
+      {{/each}}
+
+    </table>
+
+  </div>
+</div>
+
