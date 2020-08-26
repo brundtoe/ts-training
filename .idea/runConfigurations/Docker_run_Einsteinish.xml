@@ -2,7 +2,7 @@
   <configuration default="false" name="Docker run Einsteinish" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
     <deployment type="docker-compose.yml">
       <settings>
-        <option name="sourceFilePath" value="frontend/docker-compose-einsteinish.yml" />
+        <option name="sourceFilePath" value="docker-einsteinish.yml" />
       </settings>
     </deployment>
     <method v="2" />

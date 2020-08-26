@@ -19,7 +19,7 @@ services:
         environment:
           DOCKER: 'true'
         volumes:
-            - ./public:/usr/share/nginx/html
+            - ./frontend/public:/usr/share/nginx/html
         networks:
             - default
 
@@ -29,9 +29,9 @@ services:
         environment:
             DOCKER: 'true'
         volumes:
-            - ../backend/dist:/usr/src/app/dist
-            - ../backend/views:/usr/src/app/views
-            - ../static:/usr/src/app/static
+            - ./backend/dist:/usr/src/app/dist
+            - ./backend/views:/usr/src/app/views
+            - ./static:/usr/src/app/static
         restart: always
         networks:
             - default
