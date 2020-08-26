@@ -13,10 +13,10 @@
   <link rel='stylesheet' href='../stylesheets/style.css'/>
 </head>
 <body>
+<div id="topnav"></div>
 <div class="container">
   <div class="col-sm-8">
-    <h1>Fetch fra en html side</h1>
-    <h1 class="display-4">Fetch HTML page</h1>
+    <h1 class="display-5">Fetch HTML page</h1>
     <p class="lead">
       <a class="btn btn-primary btn-sm" href="/" role="button">Retur til startsiden</a>
     </p>
@@ -36,8 +36,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-<script src="../../dist/client/fetchUsers.js" type="module">
+<script type="module">
+  import loadMenu  from '../dist/modules/menuLoaded.js'
+  document.addEventListener('DOMContentLoaded',
+          function () { loadMenu('../partials/topnav.html', 'topnav')})
+</script>
+<script src="../dist/client/fetchUsers.js" type="module">
 
 </script>
+
 </body>
 </html>
