@@ -1,4 +1,4 @@
-import fetchJson from '../diverse/fetchJson.js';
+import fetchJson from '../modules/fetchJson.js';
 import handleUsers from '../modules/formaterUsers.js';
 
 document.addEventListener('DOMContentLoaded', function(e){

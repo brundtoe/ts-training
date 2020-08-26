@@ -1,14 +1,5 @@
 import docClass from "../util/renderHtmlElement.js";
-/**
-class docClass {
-    public render(divId: string, text: string){
-        const el: HTMLElement | null = document.getElementById(divId)
-        if (el) {
-            el.innerHTML = text
-        }
-    }
-}
-*/
+
 export default (url: string, domElement: string, handleResponse: any) => {
     fetch(url,{
         headers: {'Accept': 'application/json'}
