@@ -12,7 +12,7 @@ services:
       DOCKER: 'true'
     volumes:
       - ./default-prod.conf:/etc/nginx/conf.d/default.conf
-      - ./public:/usr/share/nginx/html
+      - ./frontend/public:/usr/share/nginx/html
     networks:
       - default
 
@@ -22,8 +22,9 @@ services:
     environment:
       DOCKER: 'true'
     volumes:
-      - ../backend/dist:/usr/src/app/dist
-      - ../backend/views:/usr/src/app/views
+      - ./backend/dist:/usr/src/app/dist
+      - ./backend/views:/usr/src/app/views
+      - ./backend/public:/usr/src/app/public
     restart: always
     networks:
       - default
