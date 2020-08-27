@@ -3,7 +3,7 @@ export const authorsView: string = `<p>Welcome til <strong>{{message}}</strong><
     {{#data}}
         <tr>
         <td>{{this.id}}</td>
-        <td>{{fullname this}}</td>
+        <td>{{this.firstname}}&nbsp;{{this.lastname}}</td>
         <td>{{this.mail}}</td>
         </tr>
     {{/data}}
