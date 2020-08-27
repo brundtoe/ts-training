@@ -18,19 +18,19 @@
     <div class="col-sm-8">
         <h1>Handlebars eksempel 03</h1>
         <p class="lead">Handlebars loades via modul</p>
-        <div id="data" class="col-sm-8 border rounded"></div>
-        <script id="template" type="text/x-handlebars-template">
-            <p>Welcome til <strong>{{message}}</strong></p>
-            <table id="authors" class="table table-sm">
-                {{#authors}}
-                    <tr>
-                        <td>{{fullname author}}</td>
-                        <td>{{author.mail}}</td>
-                    </tr>
-                {{/authors}}
-            </table>
-        </script>
     </div>
+    <div id="data" class="col-sm-8 border rounded"></div>
+    <script id="template" type="text/x-handlebars-template">
+        <p>Welcome til <strong>{{message}}</strong></p>
+        <table id="authors" class="table table-sm">
+            {{#authors}}
+                <tr>
+                    <td>{{fullname author}}</td>
+                    <td>{{author.mail}}</td>
+                </tr>
+            {{/authors}}
+        </table>
+    </script>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

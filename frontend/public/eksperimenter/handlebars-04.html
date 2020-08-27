@@ -15,8 +15,8 @@
     <div class="col-sm-8">
         <h1>Handlebars eksempel 04</h1>
         <p class="lead">Handlebars template loades via modul</p>
-        <div id="data" class="col-sm-8 border rounded"></div>
     </div>
+    <div id="data" class="col-sm-8 border rounded"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -28,7 +28,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <!-- de script der udfører arbejdet -->
-<script src = '../script/handlebars-v4.7.6.js'></script>
+<script src='../script/handlebars-v4.7.6.js'></script>
 <script type="module">
     import loadMenu from '../dist/modules/menuLoaded.js'
 
@@ -42,6 +42,7 @@
     import {bookstore} from "../dist/data/bookstore.js";
     import {authorsView} from "../dist/views/eksempler.js";
     import loadView from "../dist/client/loadView.js"
+
     const authors = bookstore.authors
     loadView(Handlebars, authorsView, authors, 'data')
 </script>

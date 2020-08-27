@@ -14,19 +14,20 @@
     <div class="col-sm-8">
         <h1>Handlebars eksempel 02</h1>
         <p>Handlebars loades fra lokal fil</p>
-        <div id="data" class="col-sm-8 border rounded"></div>
-        <script id="template" type="text/x-handlebars-template">
-            <p>Welcome til <strong>{{message}}</strong></p>
-            <table id="authors" class="table table-sm">
-                {{#each authors}}
-                    <tr>
-                        <td>{{this.name}}</td>
-                        <td>{{this.mail}}</td>
-                    </tr>
-                {{/each}}
-            </table>
-        </script>
     </div>
+    <div id="data" class="col-sm-8 border rounded"></div>
+    <script id="template" type="text/x-handlebars-template">
+        <p>Welcome til <strong>{{message}}</strong></p>
+        <table id="authors" class="table table-sm">
+            {{#each authors}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mail}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </script>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -45,7 +46,7 @@
             loadMenu('../partials/topnav.html', 'topnav')
         })
 </script>
-<script src = '../script/handlebars-v4.7.6.js'></script>
+<script src='../script/handlebars-v4.7.6.js'></script>
 <script>
     document.addEventListener('DOMContentLoaded', function (e) {
 
