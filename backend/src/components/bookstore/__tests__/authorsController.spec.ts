@@ -22,6 +22,7 @@ describe('Authors Controller', function () {
         res.status = jest.fn().mockReturnValue(res)
         res.render = jest.fn().mockReturnValue(res)
         res.json = jest.fn().mockReturnValue(res)
+        res.format = jest.fn().mockReturnValue(res)
         return res
     }
 
@@ -52,19 +53,18 @@ describe('Authors Controller', function () {
         expect(res.json.mock.calls[0][0].length).toBe(29)
     })
 
-    test('Sample shold return a number of authors', function () {
+    test('Sample should return a number of authors', function () {
         const num = 12
         const req = mockRequest({num: num.toString()})
         const res = mockResponse()
         authorsController.sample(req, res, next)
         expect(next).not.toHaveBeenCalled()
-        expect(res.status).toHaveBeenCalled()
-        expect(res.render).toHaveBeenCalledWith('bookstore/authors/sample', {
-            title: 'Authors',
-            authors: expect.any(Array)
+        expect(res.format).toHaveBeenCalled()
+        expect(res.format).toHaveBeenCalledWith({
+            'text/html': expect.any(Function),
+            'application/json': expect.any(Function),
+            'default': expect.any(Function)
         })
-        const actual = res.render.mock.calls[0][1].authors
-        expect(actual.length).toBe(num)
     })
 
     test('Sample should throw error on not number', function () {

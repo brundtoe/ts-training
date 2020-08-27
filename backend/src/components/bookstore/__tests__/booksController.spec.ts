@@ -23,6 +23,7 @@ describe('Books Controller', function () {
         res.status = jest.fn().mockReturnValue(res)
         res.render = jest.fn().mockReturnValue(res)
         res.json = jest.fn().mockReturnValue(res)
+        res.format = jest.fn().mockReturnValue(res)
         return res
     }
 
@@ -65,13 +66,12 @@ describe('Books Controller', function () {
         const res = mockResponse()
         booksController.sample(req, res, next)
         expect(next).not.toHaveBeenCalled()
-        expect(res.status).toHaveBeenCalled()
-        expect(res.render).toHaveBeenCalledWith('bookstore/books/sample', {
-            title: 'Bøger i Bookstore',
-            books: expect.any(Array)
+        expect(res.format).toHaveBeenCalled()
+        expect(res.format).toHaveBeenCalledWith({
+            'text/html': expect.any(Function),
+            'application/json': expect.any(Function),
+            'default': expect.any(Function)
         })
-        const actual = res.render.mock.calls[0][1].books
-        expect(actual.length).toBe(num)
     })
 
     test('Sample should throw error on not number', function () {
