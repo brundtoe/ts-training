@@ -3,6 +3,7 @@ import docClass from "../util/renderHtmlElement.js";
 
 export default function (handlebars: any, source: string, data: Array<any>, domElement: string) {
 
+    //bemærk dette virker kun med authors
     handlebars.registerHelper('fullname', function (author: any) {
         return `${author.firstname} ${author.lastname}`
     })
