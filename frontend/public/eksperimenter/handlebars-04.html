@@ -39,8 +39,9 @@
 </script>
 <!-- herunder placeres de funktionelle scripts -->
 <script type="module">
+    import {authorsView} from "../dist/views/eksempler.js";
     import loadView from "../dist/client/loadView.js"
-    loadView(Handlebars,'data')
+    loadView(Handlebars, authorsView, 'data')
 </script>
 
 </body>

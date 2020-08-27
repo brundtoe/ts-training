@@ -1,4 +1,4 @@
-import {authorsView} from "../views/eksempler.js";
+//import {authorsView} from "../views/eksempler.js";
 import docClass from "../util/renderHtmlElement.js";
 
 const authors = [
@@ -18,13 +18,13 @@ const authors = [
         }
     }]
 
-export default function (handlebars: any, domElement: string) {
+export default function (handlebars: any, source:string, domElement: string) {
 
     handlebars.registerHelper('fullname', function (author: any) {
         return `${author.firstname} ${author.lastname}`
     })
 
-    const compiledTemplate = handlebars.compile(authorsView)
+    const compiledTemplate = handlebars.compile(source)
     const rendered = compiledTemplate({message: 'Handlebars template', authors})
     docClass.render(domElement, rendered)
 
