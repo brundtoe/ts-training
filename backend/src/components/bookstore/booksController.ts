@@ -20,10 +20,16 @@ export default {
             if (!Number.isInteger(num)) throw new Error(`Request param ${param} is not a number`)
             const data: BookEntity[] = books.findAll()
             const sample = data.filter(item => item.id <= num)
-            //res.status(200).json(sample)
-            res.status(200).render('bookstore/books/sample',{
-                title: 'Bøger i Bookstore',
-                books: sample
+            res.format({
+                'text/html': function () {
+                    res.status(200).render('bookstore/books/sample', {title: 'Bøger i Bookstore', books: sample})
+                },
+                'application/json': function () {
+                    res.status(200).json(sample)
+                },
+                'default': function () {
+                    res.status(406).send('Not acceptable')
+                }
             })
         } catch (err) {
             next(err)
