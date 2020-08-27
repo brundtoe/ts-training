@@ -18,16 +18,16 @@
     <div class="col-sm-8">
         <h1>Handlebars eksempel 03</h1>
         <p class="lead">Handlebars loades via modul</p>
-        <div id="data"></div>
+        <div id="data" class="col-sm-8 border rounded"></div>
         <script id="template" type="text/x-handlebars-template">
             <p>Welcome til <strong>{{message}}</strong></p>
-            <table id="authors">
-                {{#each authors}}
+            <table id="authors" class="table table-sm">
+                {{#authors}}
                     <tr>
                         <td>{{fullname author}}</td>
                         <td>{{author.mail}}</td>
                     </tr>
-                {{/each}}
+                {{/authors}}
             </table>
         </script>
     </div>
@@ -51,7 +51,7 @@
 </script>
 <!-- herunder placeres de funktionelle scripts -->
 <script type="module">
-    import fetchAuthors from "../dist/client/fetchAuhors.js"
+    import fetchAuthors from "../dist/client/handlebarsAuhors.js"
 
     fetchAuthors(Handlebars, 'template', 'data')
 </script>
