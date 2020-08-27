@@ -2,8 +2,8 @@ export const authorsView: string = `<p>Welcome til <strong>{{message}}</strong><
             <table id="authors" class="table table-sm">
                 {{#data}}
                     <tr>
-                        <td>{{fullname author}}</td>
-                        <td>{{author.mail}}</td>
+                        <td>{{fullname this}}</td>
+                        <td>{{this.mail}}</td>
                     </tr>
                 {{/data}}
             </table> `

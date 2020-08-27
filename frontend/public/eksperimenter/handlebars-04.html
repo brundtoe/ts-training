@@ -39,9 +39,10 @@
 </script>
 <!-- herunder placeres de funktionelle scripts -->
 <script type="module">
-    import {authors} from "../dist/data/authors.js";
+    import {bookstore} from "../dist/data/bookstore.js";
     import {authorsView} from "../dist/views/eksempler.js";
     import loadView from "../dist/client/loadView.js"
+    const authors = bookstore.authors
     loadView(Handlebars, authorsView, authors, 'data')
 </script>
 
