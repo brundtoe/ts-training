@@ -1,4 +1,4 @@
-export const authorsView = `<p>Welcome til <strong>{{message}}</strong></p>
+export const authorsView: string = `<p>Welcome til <strong>{{message}}</strong></p>
             <table id="authors" class="table table-sm">
                 {{#authors}}
                     <tr>
