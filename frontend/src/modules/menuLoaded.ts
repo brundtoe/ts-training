@@ -1,4 +1,4 @@
-import docElement from '../util/renderHtmlElement.js'
+import docElement from '../util/renderElement'
 
 export default function (menu: string, domElement: string) {
     window.fetch(menu)

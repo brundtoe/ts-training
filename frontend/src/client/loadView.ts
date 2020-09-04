@@ -1,5 +1,4 @@
-//import {authorsView} from "../views/eksempler.js";
-import docElement from "../util/renderHtmlElement.js";
+import docElement from "../util/renderElement";
 
 export default function (handlebars: any, source: string, data: Array<any>, domElement: string) {
 

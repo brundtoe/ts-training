@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "start": "http-server -p 8080 --cors --proxy http://localhost:3300",
-    "build": "rm -rf ./public/dist && npx tsc",
+    "watch": "webpack --config webpack.config.js --watch",
+    "serve": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

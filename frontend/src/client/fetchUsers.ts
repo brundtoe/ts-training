@@ -1,7 +1,7 @@
 import {fetchJson} from '../modules/fetchJson.js'
 import formaterUsers from '../modules/formaterUsers.js';
 import config from '../util/config.js'
-import docElement from "../util/renderHtmlElement.js";
+import docElement from "../util/renderElement.js";
 
 document.addEventListener('DOMContentLoaded', function(e){
 
