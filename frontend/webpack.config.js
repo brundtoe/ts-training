@@ -14,6 +14,7 @@ const webpackConfig = {
   devtool: 'eval-cheap-module-source-map',
   entry: {
     index: path.resolve(__dirname, './src/page-index/index.ts'),
+    users: path.resolve(__dirname, './src/page-users/users.ts'),
   },
   output: {
     hashDigestLength: 8,
@@ -22,6 +23,9 @@ const webpackConfig = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
+    proxy: {
+      '/bookstore': 'http://localhost:3300/bookstore'
+    },
     hot: true
   },
   module: {
@@ -101,7 +105,7 @@ const webpackConfig = {
   }
 }
 
-const files = ['index']
+const files = ['index','users']
 
 files.forEach((file) => {
   webpackConfig.plugins.push(
