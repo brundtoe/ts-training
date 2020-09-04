@@ -24,7 +24,7 @@ const webpackConfig = {
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
     proxy: {
-      '/bookstore': 'http://localhost:3300/bookstore'
+      '/bookstore': 'http://localhost:3300'
     },
     hot: true
   },
