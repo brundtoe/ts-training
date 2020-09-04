@@ -1,5 +1,5 @@
 //import {authorsView} from "../views/eksempler.js";
-import docClass from "../util/renderHtmlElement.js";
+import docElement from "../util/renderHtmlElement.js";
 
 export default function (handlebars: any, source: string, data: Array<any>, domElement: string) {
 
@@ -8,7 +8,7 @@ export default function (handlebars: any, source: string, data: Array<any>, domE
         message: 'Handlebars template',
         data: data
     })
-    docClass.render(domElement, rendered)
+    docElement.renderHtml(domElement, rendered)
 
 
 }

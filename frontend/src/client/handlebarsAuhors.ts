@@ -1,4 +1,4 @@
-import docClass from '../util/renderHtmlElement.js'
+import docElement from '../util/renderHtmlElement.js'
 
 type authorType = {
     firstname: string,
@@ -33,7 +33,7 @@ export default function (handlebars: any, templateId: string, domElement: string
         const source = el.innerHTML
         const compiledTemplate = handlebars.compile(source)
         const rendered = compiledTemplate({message: 'Handlebars template', authors})
-        docClass.render(domElement, rendered)
+        docElement.renderHtml(domElement, rendered)
 
     }
 }

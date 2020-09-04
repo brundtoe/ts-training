@@ -33,7 +33,7 @@ backend: http://localhost/backend eller http://localhost:3300
 
 nginx lytter på port 80 og port 3300
 
-De to næste modeller kræver at **URI til backend (http://localhost:3300)** anvendes i scripts på frontend
+De to næste modeller kræver at **URI til backend (http://localhost:3300)** anvendes i scripts på frontend **opdater frontend/util/config.ts**
 
 **Run frontend hhv backend docker-compose.yml**
 
