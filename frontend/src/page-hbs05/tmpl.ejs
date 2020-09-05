@@ -15,11 +15,11 @@
 </section>
 <section class="container">
   <div class="col-sm-8">
-    <h1 class="display-5">Handlebars 04</h1>
+    <h1 class="display-5">Handlebars 05</h1>
     <p class="lead">
       <a id="alert" class="btn btn-primary btn-sm" role="button">Do something</a>
     </p>
-    <p class="lead">Data loades lokalt og formateres med Handlebars</p>
+    <p class="lead">Data hentes fra backend og formateres med handlebars</p>
   </div>
 </section>
 <!-- her indstættes en sektion med den del der tager data -->
@@ -29,20 +29,5 @@
     <div id="data" ></div>
   </div>
 </div>
-
-<script id="template" type="text/x-handlebars-template">
-  <p>Welcome til <strong>{{message}}</strong></p>
-  <table id="authors" class="table table-sm">
-    {{#authors}}
-      <tr>
-        <td>{{fullname author}}</td>
-        <td>{{author.mail}}</td>
-      </tr>
-    {{/authors}}
-  </table>
-</script>
-
-
-
 </body>
 </html>
