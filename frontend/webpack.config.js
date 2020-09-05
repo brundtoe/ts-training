@@ -16,8 +16,6 @@ const webpackConfig = {
     index: path.resolve(__dirname, './src/page-index/index.ts'),
     users: path.resolve(__dirname, './src/page-users/users.ts'),
     template:  path.resolve(__dirname, './src/page-template/index.ts'),
-    hbs04:  path.resolve(__dirname, './src/page-hbs04/index.ts'),
-    hbs05:  path.resolve(__dirname, './src/page-hbs05/index.ts')
   },
   output: {
     hashDigestLength: 8,
@@ -108,7 +106,7 @@ const webpackConfig = {
   }
 }
 
-const files = ['index','users','template','hbs04','hbs05']
+const files = ['index','users','template']
 
 files.forEach((file) => {
   webpackConfig.plugins.push(
