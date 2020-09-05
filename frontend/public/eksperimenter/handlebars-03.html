@@ -46,12 +46,12 @@
 
     document.addEventListener('DOMContentLoaded',
         function () {
-            loadMenu('../partials/topnav.html', 'topnav')
+            loadMenu('../partials/topnav.ejs', 'topnav')
         })
 </script>
 <!-- herunder placeres de funktionelle scripts -->
 <script type="module">
-    import fetchAuthors from "../dist/client/handlebarsAuhors.js"
+    import fetchAuthors from "../../dist/client/handlebarsAuhors.js"
 
     fetchAuthors(Handlebars, 'template', 'data')
 </script>
