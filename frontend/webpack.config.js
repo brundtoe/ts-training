@@ -15,6 +15,7 @@ const webpackConfig = {
   entry: {
     index: path.resolve(__dirname, './src/page-index/index.ts'),
     users: path.resolve(__dirname, './src/page-users/users.ts'),
+    scrap:  path.resolve(__dirname, './src/page-scrap/index.ts'),
   },
   output: {
     hashDigestLength: 8,
@@ -105,7 +106,7 @@ const webpackConfig = {
   }
 }
 
-const files = ['index','users']
+const files = ['index','users','scrap']
 
 files.forEach((file) => {
   webpackConfig.plugins.push(
