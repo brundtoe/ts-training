@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node dist/bin/www.js",
     "build-node": "rm -rf ./dist && npx tsc --build src/tsconfig.json ",
-    "start-prod": "npx nodemon dist/bin/www.js",
+    "start-prod": "nodemon dist/bin/www.js",
     "start-dev": "NODE_ENV=development ts-node --project src/tsconfig.json ./src/bin/www.ts",
     "test": "jest"
   },
