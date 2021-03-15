@@ -6,7 +6,7 @@ Anvendes i forbindelse med træning i at anvende TypeScript
 
 ## Indhold
 
-Appen er opbygget på ggrundlag af en standard WebStorm Node.js Express app med Handlebars som view engine
+Appen er opbygget på grundlag af en standard WebStorm Node.js Express app med Handlebars som view engine
 
 Backend er omlagt fra native JavaScript til TypeScript
 
@@ -18,7 +18,7 @@ Databasen indeholder entiteterne authors, books og users, der indlæses i et **m
 
 Databasen resettes hver gang applikationen genstartes.
 
-Databasen er tilgængelig via http://localhost:3000/bookstore
+Databasen er tilgængelig via http://localhost:3300/bookstore
 
 
 
