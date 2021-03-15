@@ -1,4 +1,4 @@
-import handlebars from 'handlebars'
+const handlebars = require('../../node_modules/handlebars/dist/handlebars.min.js')
 
 import {bookstore} from "../assets/data/bookstore";
 import {authorsView} from "../views/authors";

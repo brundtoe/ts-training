@@ -1,4 +1,4 @@
-import handlebars from 'handlebars'
+const handlebars = require('../../node_modules/handlebars/dist/handlebars.min.js')
 
 import {authorsView} from "../views/authors"
 import {fetchJson} from "../modules/fetchJson"
