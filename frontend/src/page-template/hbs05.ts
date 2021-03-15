@@ -1,4 +1,5 @@
-const handlebars = require('../../node_modules/handlebars/dist/handlebars.min.js')
+// @ts-ignore
+import handlebars from '../../node_modules/handlebars/dist/handlebars.min.js'
 
 import {authorsView} from "../views/authors"
 import {fetchJson} from "../modules/fetchJson"
