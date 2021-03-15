@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Latest compiled and minified CSS -->
-    <link rel='stylesheet' href='../stylesheets/style.css'/>
+
 </head>
 <body>
 <div id="topnav"></div>
@@ -28,13 +28,13 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <!-- de script der udfører arbejdet -->
-<script src='../script/handlebars-v4.7.6.js'></script>
+<script src='./scripts/handlebars-v4.7.7.min.js'></script>
 <script type="module">
     import loadMenu from '../dist/modules/menuLoaded.js'
 
     document.addEventListener('DOMContentLoaded',
         function () {
-            loadMenu('../partials/topnav.ejs', 'topnav')
+            loadMenu('./partials/topnav.html', 'topnav')
         })
 </script>
 <!-- herunder placeres de funktionelle scripts -->
@@ -43,7 +43,7 @@
     import {fetchJson} from "../dist/modules/fetchJson.js";
     import loadView from "../dist/client/loadView.js";
 
-    const url = '/bookstore/authors/sample/12'
+    const url = 'http://localhost:3300/bookstore/authors/sample/14'
     fetchJson(url).then((data) => {
         loadView(Handlebars, authorsView, data, 'data')
         console.log('hentet og indsat data på siden ')
