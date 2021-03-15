@@ -21,8 +21,8 @@ app.set('views', path.join(__dirname, '../views'))
 app.set('view engine', '.hbs')
 
 const corsOptions = {
-  origin: ['http://localhost:8080', 'http://localhost'],
-  methods: ['GET','POST','PUT','DELETE']
+  origin: ['http://localhost:8080', 'http://localhost','http://localhost:63342'],
+  methods: ['GET','POST','PUT','DELETE','OPTIONS']
 }
 app.use(cors(corsOptions))
 
