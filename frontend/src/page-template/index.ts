@@ -3,5 +3,5 @@ import '../scss/index.scss'
 import './page.scss'
 
 import './ejsTemplate'
-import './hbs04'
-import './hbs05'
+//import './hbs04'
+//import './hbs05'
