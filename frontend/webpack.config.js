@@ -66,11 +66,12 @@ const webpackConfig = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            name: '[name].[hash:8].[ext]',
+                            name: '[name].[fullhash:8].[ext]',
                             outputPath: path.resolve(__dirname, './dist/assets/images')
                         }
                     }
-                ]
+                ],
+                type: 'javascript/auto'
             }
         ]
     },
