@@ -1,7 +1,7 @@
 import {Request, Response, NextFunction} from 'express'
 import createError from 'http-errors'
 const userSchema = require('./userSchema')
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 module.exports = {
   post: (req: Request, res: Response, next: NextFunction) => {

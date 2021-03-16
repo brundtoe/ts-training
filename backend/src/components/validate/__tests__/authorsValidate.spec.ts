@@ -1,5 +1,5 @@
 const validate = require('../authors')
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 describe('Validering af author schema', () => {
 

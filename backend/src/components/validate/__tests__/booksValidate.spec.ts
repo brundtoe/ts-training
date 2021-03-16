@@ -1,6 +1,6 @@
 //import {Request, Response, NextFunction} from 'express'
 const validate = require('../books')
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 describe('Validering af book schema', () => {
 

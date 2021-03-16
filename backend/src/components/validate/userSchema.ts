@@ -1,4 +1,4 @@
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 const userSchema = Joi.object({
   _id: Joi.string().regex(/^[0-9a-fA-F]{24}$/,'Invalid ObjectId'),

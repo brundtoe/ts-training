@@ -2,7 +2,7 @@ import {Request, Response, NextFunction} from 'express'
 const createError = require('http-errors')
 const booksSchema = require('./booksSchema')
 const {authorExists} = require('../../lib/authorExists')
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 module.exports = {
   post: async (req: Request, res: Response, next: NextFunction) => {
