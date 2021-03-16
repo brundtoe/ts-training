@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server public -p 8080 --cors --proxy http://localhost:3300",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.7.7"
+    "handlebars": "^4.7.7",
+    "http-server": "^0.12.3"
   }
 }
