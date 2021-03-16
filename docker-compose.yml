@@ -6,7 +6,7 @@ services:
     image: nginx:bbr
     container_name: frontend
     ports:
-      - 80:80
+      - 8080:8080
       - 3300:3300
     environment:
       DOCKER: 'true'
