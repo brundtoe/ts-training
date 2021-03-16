@@ -19,7 +19,7 @@ services:
         environment:
           DOCKER: 'true'
         volumes:
-            - ./frontend/public:/usr/share/nginx/html
+            - ./frontend/dist:/usr/share/nginx/html
         networks:
             - default
 
