@@ -6,16 +6,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Latest compiled and minified CSS -->
 </head>
 <body>
 <div id="topnav"></div>
 <div class="container">
     <div class="col-sm-8">
-        <h1>Handlebars eksempel 04</h1>
-        <p class="lead">Handlebars template loades via modul</p>
+        <h1>Handlebars eksempel 02</h1>
+        <p>Handlebars loades fra lokal fil</p>
     </div>
     <div id="data" class="col-sm-8 border rounded"></div>
+    <script id="template" type="text/x-handlebars-template">
+        <p>Welcome til <strong>{{message}}</strong></p>
+        <table id="authors" class="table table-sm">
+            {{#each authors}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mail}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </script>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -26,24 +37,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-<!-- de script der udfører arbejdet -->
-<script src='./scripts/handlebars-v4.7.7.min.js'></script>
 <script type="module">
-    import loadMenu from '../dist/modules/menuLoaded.js'
+    import loadMenu from '../scripts/modules/menuLoaded.js'
 
     document.addEventListener('DOMContentLoaded',
         function () {
-            loadMenu('./partials/topnav.html', 'topnav')
+            loadMenu('../partials/topnav.html', 'topnav')
         })
 </script>
-<!-- herunder placeres de funktionelle scripts -->
-<script type="module">
-    import {bookstore} from "../dist/data/bookstore.js";
-    import {authorsView} from "../dist/views/eksempler.js";
-    import loadView from "../dist/client/loadView.js"
+<script src='../../node_modules/handlebars/dist/handlebars.min.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function (e) {
 
-    const authors = bookstore.authors
-    loadView(Handlebars, authorsView, authors, 'data')
+        const authors = [{name: 'Jens Andersen', mail: 'jens@anymail.com'},
+            {name: 'Marie Hansen', mail: 'marie@anymail.com'}]
+        const template = document.getElementById('template').innerHTML
+        const compiledTemplate = Handlebars.compile(template)
+        const rendered = compiledTemplate({message: 'Handlebars template', authors})
+        document.getElementById('data').innerHTML = rendered
+
+    })
 </script>
 
 </body>
