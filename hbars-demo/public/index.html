@@ -4,18 +4,54 @@
     <meta charset="UTF-8">
     <title>Handlebars Demo</title>
     <link rel="stylesheet" href="/stylesheets/style-laravel.css">
-    <style>
-        body {
-            margin: 20px 50px;
-        }
-    </style>
 </head>
 <body>
-<h1>Handelbars demo</h1>
-<p><a href="pages/handlebars-01.html">Handlebars 01</a></p>
-<p><a href="pages/handlebars-02.html">Handlebars 02</a></p>
-<p><a href="pages/handlebars-03.html">Handlebars 03</a></p>
-<p><a href="pages/handlebars-04.html">Handlebars 04</a></p>
-<p><a href="pages/handlebars-05.html">Handlebars 05</a></p>
+<div id="topnav"></div>
+<div class="container">
+    <div class="col-sm-8">
+        <h1>Handlebars Demo</h1>
+        <p class="lead">Eksempler på client-side anvendelse af Handlebars</p>
+    </div>
+
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th>Eksempel</th>
+            <th>Bemærkninger</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="pages/handlebars-01.html">Handlebars 01</a></td>
+            <td>Handlebars fra cdnjs og enkelt message</td>
+        </tr>
+        <tr>
+            <td><a href="pages/handlebars-02.html">Handlebars 02</a></td>
+            <td>Handlebars fra node module/bin/dist handlebars</td>
+        </tr>
+        <tr>
+            <td><a href="pages/handlebars-03.html">Handlebars 03</a></td>
+            <td>Handlebars fra cdnjs og template indlejret i script tag</td>
+        </tr>
+        <tr>
+            <td><a href="pages/handlebars-04.html">Handlebars 04</a></td>
+            <td>Handlebars lokal kopi, extern template og data fra frontend json file</td>
+        </tr>
+        <tr>
+            <td><a href="pages/handlebars-05.html">Handlebars 05</a></td>
+            <td>Handlebars lokal kopi, extern template og data fra backend</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script type="module">
+    import loadMenu from './scripts/modules/menuLoaded.js'
+
+    document.addEventListener('DOMContentLoaded',
+        function () {
+            loadMenu('../partials/topnav.html', 'topnav')
+        })
+</script>
+<!-- herunder placeres de funktionelle scripts -->
 </body>
 </html>
