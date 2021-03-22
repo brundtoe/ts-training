@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Backend Nodemon" type="js.build_tools.npm">
-    <package-json value="$PROJECT_DIR$/backend/package.json" />
+  <configuration default="false" name="Frontend dev serve" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/frontend/package.json" />
     <command value="run" />
     <scripts>
-      <script value="start-prod" />
+      <script value="serve" />
     </scripts>
     <node-interpreter value="project" />
     <envs />

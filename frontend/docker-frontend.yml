@@ -6,7 +6,7 @@ services:
     image: nginx:bbr
     container_name: frontend
     volumes:
-      - ./public:/usr/share/nginx/html
+      - ./dist:/usr/share/nginx/html
     ports:
       - 80:80
     networks:
