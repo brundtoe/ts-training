@@ -9,9 +9,9 @@ ejsTemplate.addEventListener('click', (e) => {
     e.preventDefault()
 
     const users = bookstore.customers.filter(user => user.id <= 12)
-    const tmpl = `<table>
+    const tmpl = `<table><tbody data-testid="customers">
         <% _.forEach(users, function(user){ %>
-            <tr> 
+            <tr id="customer-<%= user.id %>" > 
                 <td><%= user.id%></td>
                 <td><%= user.name%></td>
                 <td><%= user.city%></td>
@@ -19,6 +19,7 @@ ejsTemplate.addEventListener('click', (e) => {
                 <td><%= user.mail%></td>
             </tr>
         <% }) %>
+    </tbody>
     </table>`
 
     const compiled = _.template(tmpl)
