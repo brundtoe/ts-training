@@ -1,0 +1,10 @@
+{
+  "author": {
+    "id": 5,
+    "firstname": "Alexander",
+    "lastname": "Nakhimovsky",
+    "mail": "Nakhimovsky@mail.com"
+  },
+  "status": 200,
+  "message": "Author 5 er fundet"
+}
