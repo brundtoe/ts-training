@@ -8,6 +8,7 @@
   </div>
   <div class="col-sm-8 border rounded">
     <table id="books" class="table table-sm">
+        <tbody data-testid="books">
       {{#each books}}
         <tr>
           <td>{{this.id}}</td>
@@ -16,6 +17,7 @@
           <td>{{this.onhand}}</td>
         </tr>
       {{/each}}
+        </tbody>
     </table>
   </div>
 </div>
