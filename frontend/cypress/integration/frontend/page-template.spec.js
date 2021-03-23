@@ -80,4 +80,21 @@ describe('testing page template', () => {
             })
     })
 
+    it('Mocking response from author samples 12', () => {
+
+        cy.intercept('GET', '/bookstore/authors', {
+            statusCode: 200,
+            body: {
+                message: 'It worked'
+            }
+        }).as('sample')
+
+        cy.get('#hbs05-template').click()
+
+        cy.wait('@sample')
+            .then((interception) => {
+                expect(interception.response.statusCode).to.equal(200)
+                expect(interception.response.body).to.eql({message: "It worked"})
+            })
+    })
 })
