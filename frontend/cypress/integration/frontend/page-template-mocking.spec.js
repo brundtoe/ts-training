@@ -56,6 +56,10 @@ describe('Mocking page template', () => {
                 expect(actual).to.have.length(4)
                 expect(actual).to.eql(this.authors)
             })
+        //Er de fire authors også indsat på siden
+        cy.get('[data-testid="authors"]')
+            .children('tr')
+            .should('have.length',4)
     })
 
 })
