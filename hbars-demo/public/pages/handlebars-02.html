@@ -13,7 +13,10 @@
 <div class="container">
     <div class="col-sm-8">
         <h1>Handlebars eksempel 02</h1>
-        <p>Handlebars loades fra lokal fil</p>
+        <p>Handlebars loades fra node_modules</p>
+        <p>Det virker ikke, da node_modules ligger udenfor mappen public</p>
+        <p>clientside script kan ikke få adgang til mapper udenfor root</p>
+        <p>Det fungerer i ts-frontend, da der her compileres med webpack</p>
     </div>
     <div id="data" class="col-sm-8 border rounded"></div>
     <script id="template" type="text/x-handlebars-template">
