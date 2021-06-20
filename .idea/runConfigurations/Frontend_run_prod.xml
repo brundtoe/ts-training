@@ -1,5 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Frontend run prod" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/frontend/package.json" />
     <command value="start" />
     <node-interpreter value="project" />
     <envs />
