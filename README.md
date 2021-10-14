@@ -4,7 +4,7 @@ Træningsprojekt i anvendelse af typeScript
 
 Projektet består af en frontend og en backend, der begge er skrevet i TypeScript
 
-frontend runnes med **htp-server**
+frontend runnes med **http-server**
 
 backend er en Node.js Expess applikation
 
