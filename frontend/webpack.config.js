@@ -20,10 +20,10 @@ const webpackConfig = {
     output: {
         hashDigestLength: 8,
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name][hash].js'
+        filename: '[name][fullhash].js'
     },
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
+        //contentBase: path.resolve(__dirname, './dist'),
         proxy: {
             '/bookstore': 'http://localhost:3300'
         },
@@ -66,7 +66,7 @@ const webpackConfig = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            name: '[name].[fullhash:8].[ext]',
+                            name: '[name].[fullhash].[ext]',
                             outputPath: path.resolve(__dirname, './dist/assets/images')
                         }
                     }
@@ -93,7 +93,7 @@ const webpackConfig = {
             }
         ),
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].css',
+            filename: '[name].[fullhash].css',
             chunkFilename: '[id].css'
         }),
         new CopyWebpackPlugin(
