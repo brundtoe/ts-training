@@ -45,19 +45,7 @@ const webpackConfig = {
             },
             {
                 test: [/\.css$|.scss$/],
-                use: [MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    require('autoprefixer')()
-                                ]
-                            }
-                        }
-                    },
-                    'sass-loader']
+                use: ['style-loader', 'css-loader','sass-loader']
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
