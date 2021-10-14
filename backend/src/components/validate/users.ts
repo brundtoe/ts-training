@@ -13,7 +13,8 @@ module.exports = {
         .or('name','state')
       Joi.assert(req.body, schema)
       next()
-    } catch (err) {
+    } catch (err: any) {
+      //@ts-ignore
       next(createError(400, err))
     }
   },
@@ -26,7 +27,8 @@ module.exports = {
 //        .or('name','state')
       Joi.assert(req.body,schema )
       next()
-    } catch (err) {
+    } catch (err: any) {
+      //@ts-ignore
       next(createError(400, err))
     }
   },
@@ -35,7 +37,8 @@ module.exports = {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()
-    } catch (err) {
+    } catch (err: any) {
+      //@ts-ignore
       next(createError(400, err))
     }
   },
@@ -43,7 +46,8 @@ module.exports = {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()
-    } catch (err) {
+    } catch (err: any) {
+      //@ts-ignore
       next(createError(400, err))
     }
   }

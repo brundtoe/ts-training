@@ -28,7 +28,7 @@ const users = {
                 })
             }
             return data
-        } catch (err) {
+        } catch (err: any) {
             return []
         }
     },
@@ -47,7 +47,7 @@ const users = {
                 message: `User med nummer ${user_id} findes ikke`,
             }
 
-        } catch (err) {
+        } catch (err: any) {
             return {
                 user: undefined,
                 status: statusCode.NotFound,
@@ -72,7 +72,7 @@ const users = {
                 status: statusCode.NotFound,
                 message: `User med nummer ${user.id} findes ikke`,
             }
-        } catch (err) {
+        } catch (err: any) {
             return {
                 user: undefined,
                 status: statusCode.NotFound,
@@ -99,7 +99,7 @@ const users = {
                 status: statusCode.NotFound,
                 message: 'Unexpected end of save author'
             }
-        } catch (err) {
+        } catch (err: any) {
             return {
                 user: undefined,
                 status: statusCode.NotFound,

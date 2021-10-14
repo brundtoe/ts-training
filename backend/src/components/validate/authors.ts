@@ -11,7 +11,7 @@ module.exports = {
         .with('firstname', ['lastname','mail'])
       Joi.assert(req.body, schema)
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   },
@@ -22,7 +22,7 @@ module.exports = {
         .with('_id',['id','firstname','lastname','mail'])
       Joi.assert(req.body,schema )
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   },
@@ -31,7 +31,7 @@ module.exports = {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   },
@@ -39,7 +39,7 @@ module.exports = {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   }

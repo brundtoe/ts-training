@@ -28,7 +28,7 @@ export default {
                 })
             }
             return data
-        } catch (err) {
+        } catch (err: any) {
             return []
         }
     },
@@ -48,7 +48,7 @@ export default {
                 message: `Book med nummer ${book_id} findes ikke`,
             }
 
-        } catch (err) {
+        } catch (err: any) {
             return {
                 book: undefined,
                 status: statusCode.NotFound,
@@ -72,7 +72,7 @@ export default {
                 status: statusCode.NotFound,
                 message: `Book med nummer ${book.id} findes ikke`,
                 }
-        } catch (err) {
+        } catch (err: any) {
             return {
                 book: undefined,
                 status: statusCode.NotFound,
@@ -95,7 +95,7 @@ export default {
                     message: `Book ${book.id} er oprettet`
                 }
             }
-        } catch (err) {
+        } catch (err: any) {
             return {
                 book: undefined,
                 status: statusCode.NotFound,

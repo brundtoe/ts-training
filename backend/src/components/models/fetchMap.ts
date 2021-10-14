@@ -14,7 +14,7 @@ function getAuthors() : AuthorMap {
                 authors.set(item.id, item)
             })
         }
-    } catch (err) {
+    } catch (err: any) {
         console.log(err)
     }
     return authors
@@ -29,7 +29,7 @@ function getBooks() : BookMap {
                 books.set(item.id, item)
             })
         }
-    } catch (err) {
+    } catch (err: any) {
         console.log(err)
     }
     return books
@@ -44,7 +44,7 @@ function getUsers(): UserMap {
                 users.set(item.id, item)
             })
         }
-    } catch (err) {
+    } catch (err: any) {
         console.log(err)
     }
     return users

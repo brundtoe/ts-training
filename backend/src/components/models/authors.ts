@@ -28,7 +28,7 @@ export default {
                 })
             }
             return data
-        } catch (err) {
+        } catch (err: any) {
             return []
         }
     },
@@ -49,7 +49,7 @@ export default {
                 message: `Author med nummer ${author_id} findes ikke`
             }
 
-        } catch (err) {
+        } catch (err: any) {
             return {
                 author: undefined,
                 status: statusCode.NotFound,
@@ -75,7 +75,7 @@ export default {
                 message: `Author med nummer ${author.id} findes ikke`,
             }
 
-        } catch (err) {
+        } catch (err: any) {
 
             return {
                 author: undefined,
@@ -104,7 +104,7 @@ export default {
                 status: statusCode.NotFound,
                 message: 'Unexpected end of save author'
             }
-        } catch (err) {
+        } catch (err: any) {
             return {
                 author: undefined,
                 status: statusCode.NotFound,

@@ -13,7 +13,7 @@ module.exports = {
       const author = await authorExists(parseInt(req.body.author_id))
       if (!author) throw createError(400,'author does not exist')
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   },
@@ -26,7 +26,7 @@ module.exports = {
       const author = await authorExists(parseInt(req.body.author_id))
       if (!author) throw createError(400,'author does not exist')
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   },
@@ -35,7 +35,7 @@ module.exports = {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   },
@@ -43,7 +43,7 @@ module.exports = {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()
-    } catch (err) {
+    } catch (err: any) {
       next(createError(400, err))
     }
   }

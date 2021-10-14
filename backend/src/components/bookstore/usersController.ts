@@ -8,7 +8,7 @@ export default {
         try {
             const data = users.findAll()
             res.status(200).json(data)
-        } catch (err) {
+        } catch (err: any) {
             next(err)
         }
     },
@@ -30,7 +30,7 @@ export default {
                     res.status(406).send('Not acceptable')
                 }
             })
-        } catch (err) {
+        } catch (err: any) {
             next(err)
         }
     },
@@ -41,7 +41,7 @@ export default {
             if (!Number.isInteger(id)) throw new Error(`Request param ${param} is not a number`)
             const data = users.findById(id)
             res.status(200).json({data, link: config.bookstore})
-        } catch (err) {
+        } catch (err: any) {
             next(err)
         }
     },
@@ -52,7 +52,7 @@ export default {
             if (!Number.isInteger(id)) throw new Error(`Request param ${param} is not a number`)
             const data = users.deleteById(id)
             res.status(200).json({data, link: config.bookstore})
-        } catch (err) {
+        } catch (err: any) {
             next(err)
         }
     },
@@ -70,7 +70,7 @@ export default {
             const data = users.updateById(user)
             res.status(200).json({data, link: config.bookstore})
 
-        } catch (err) {
+        } catch (err: any) {
             next(err)
         }
 
@@ -89,7 +89,7 @@ export default {
             const data = users.save(user)
             res.status(201).json({data, link: config.bookstore})
 
-        } catch (err) {
+        } catch (err: any) {
             next(err)
         }
     }

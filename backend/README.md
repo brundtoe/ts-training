@@ -18,6 +18,16 @@ Databasen indeholder entiteterne authors, books og users, der indlæses i et **m
 
 Databasen resettes hver gang applikationen genstartes.
 
+## build og run backend
+
+production mode
+
+- npm run build-node (Backend build)
+- npm start-prod     (Backend run prod)
+
+Development mode
+- npm run start-dev
+
 Databasen er tilgængelig via http://localhost:3300/bookstore
 
 
