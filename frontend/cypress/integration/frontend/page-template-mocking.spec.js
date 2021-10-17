@@ -2,9 +2,9 @@ describe('Mocking page template', () => {
     beforeEach(() => {
         cy.visit('/template.html')
     })
-    it('Mocking response from author samples 12', () => {
+    it('Mocking response from author samples', () => {
 
-        cy.intercept('GET', '/bookstore/authors', {
+        cy.intercept('GET', '/bookstore/authors/**', {
             statusCode: 200,
             body: {
                 message: 'It worked'
@@ -23,7 +23,7 @@ describe('Mocking page template', () => {
     it('Mocking response using fixtures', function() {
 
         cy.fixture('authors').as('authors').then((authors) => {
-            cy.intercept('GET', '/bookstore/authors', authors
+            cy.intercept('GET', '/bookstore/authors/**', authors
             ).as('sample')
         })
 
@@ -41,7 +41,7 @@ describe('Mocking page template', () => {
     it('Mocking response using cy.its', function() {
 
         cy.fixture('authors').as('authors').then((authors) => {
-            cy.intercept('GET', '/bookstore/authors', authors
+            cy.intercept('GET', '/bookstore/authors/**', authors
             ).as('sample')
         })
 
