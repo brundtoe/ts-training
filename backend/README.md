@@ -30,6 +30,25 @@ Development mode
 
 Databasen er tilgængelig via http://localhost:3300/bookstore
 
+Test med Jest
+=============
+Backend tests med jest. Run test med:
 
+    npm test
+
+Test med Cypress
+================
+Cypres anvendes primært til test af frontend. Der er en enkelt test script som demo for test af backend.
+
+Test scripts er placeret i frontend hvor cypress er installeret
+
+Run test
+- start build backend
+- start backend
+- run test
+
+    npx cypress run --headless --config-file cypress.backend.json
+
+konfigurationen i frontend/cypress.backend.json lader cypress lytte på port 3300, som er porten til backend
 
 
