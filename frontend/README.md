@@ -66,4 +66,19 @@ docker build -t ts-config:prod .
 
 Imaget rebuildes hver gang der foretages opdateringer af node_modules 
 
- 
+## test med Cypress
+Der foretages kun end2end test.
+
+- start frontend dev server
+- start backend i prod mode
+- start testen med
+    
+    npx run cypress
+
+Cypress åbnes og testcase kan udvælges til testen
+
+Default konfigurationsfilen cypress.json anvendes
+
+## test med run configurationer
+
+test kan udføres med IntelliJ run configurations
