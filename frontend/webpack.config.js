@@ -65,9 +65,7 @@ const webpackConfig = {
         new CleanWebpackPlugin(),
         new webpack.ProvidePlugin(
             {
-                $: 'jquery',
-                jQuery: 'jquery',
-                'window.jQuery': 'jquery'
+                bootstrap: ['bootstrap']
             }
         ),
         new CopyWebpackPlugin(
