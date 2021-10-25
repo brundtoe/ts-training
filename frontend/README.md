@@ -2,6 +2,11 @@
 
 Dette er en frontend til ts-backend
 
+## status oktober 2021
+
+- node packages er opdateret
+- code inspections udført og opdateret - resterende rettes ikke
+
 ## Installation
 
 Clone projektet til en local host
@@ -50,7 +55,7 @@ Her skal URI være defineret som **window.location.origin**., idet **http-server
 
 I mappen frontend/public findes en række eksempler på anvendelse af Handlebar templates i en browser
 
-- handlebars indsat som linkt til https://cdnjs.com/
+- handlebars indsat som links til https://cdnjs.com/
 - handlebars downloaded fra https.//cdnjs.com
 
 Det er en kopi af en typescript kompileret udgave. 
@@ -81,4 +86,4 @@ Default konfigurationsfilen cypress.json anvendes
 
 ## test med run configurationer
 
-test kan udføres med IntelliJ run configurations
+Test kan udføres med IntelliJ run configurations
