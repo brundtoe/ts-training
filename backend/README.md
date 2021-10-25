@@ -4,6 +4,10 @@ Anvendes i forbindelse med træning i at anvende TypeScript
 
 **Work in Progress**
 
+## opdatering oktober 2021
+
+- node packages er opdateret
+
 ## Indhold
 
 Appen er opbygget på grundlag af en standard WebStorm Node.js Express app med Handlebars som view engine
