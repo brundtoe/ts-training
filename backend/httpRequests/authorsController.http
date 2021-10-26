@@ -21,7 +21,7 @@ client.test("Response author is Andrew Enfield", function() {
     mail: "Enfield@mail.com"
   }
   client.log(response.body.data.author.mail)
-  client.assert(response.body.data.author.mail == author.mail, "expected autor to be" + author.mail)
+  client.assert(response.body.data.author.mail === author.mail, "expected autor to be" + author.mail)
 })
 
 

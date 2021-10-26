@@ -2,7 +2,6 @@ jest.mock('../fetchMap')
 const fetchMap = require('../fetchMap')
 import authors from '../authors'
 import {AuthorEntity, AuthorResponse, statusCode} from "../models_interfaces";
-import {BookEntity, BookResponse} from "../models_interfaces";
 
 const persons = new Map<number, AuthorEntity>()
 

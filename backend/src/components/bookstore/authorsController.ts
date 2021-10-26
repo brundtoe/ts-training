@@ -23,7 +23,7 @@ export default {
             const sample = data.filter(item => item.id <= num)
             res.format({
                 'text/html': function () {
-                    res.status(200).render('bookstore/authors/sample', {title: 'Auhtors', authors: sample})
+                    res.status(200).render('bookstore/authors/sample', {title: 'Authors', authors: sample})
                 },
                 'application/json': function () {
                     res.status(200).json(sample)

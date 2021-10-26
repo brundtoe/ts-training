@@ -1,4 +1,4 @@
-var createError = require('http-errors');
+const createError = require('http-errors');
 import express from 'express';
 import cors from 'cors'
 import { Request, Response, NextFunction} from "express";
@@ -10,7 +10,7 @@ import indexRouter from './routes';
 import fetchRouter from './routes/fetch';
 import bookstoreRouter from './routes/bookstore'
 
-var app = express();
+const app = express();
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials'],

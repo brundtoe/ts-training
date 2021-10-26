@@ -22,7 +22,7 @@ Databasen indeholder entiteterne authors, books og users, der indlæses i et **m
 
 Databasen resettes hver gang applikationen genstartes.
 
-## build og run backend
+## Build og run backend
 
 production mode
 
@@ -34,14 +34,14 @@ Development mode
 
 Databasen er tilgængelig via http://localhost:3300/bookstore
 
-Test med Jest
-=============
+## Test med Jest
+
 Backend tests med jest. Run test med:
 
     npm test
 
-Test med Cypress
-================
+## Test med Cypress
+
 Cypres anvendes primært til test af frontend. Der er en enkelt test script som demo for test af backend.
 
 Test scripts er placeret i frontend hvor cypress er installeret
