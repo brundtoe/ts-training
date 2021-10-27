@@ -1,6 +1,9 @@
 $h2-bg-color: yellow;
 $h2-width: 600px;
 $table-border-color: green;
+$jb-cyan: #00b7ff;
+$jb-light: #f8f9fa;
+$jb-dark: #343a40;
 
 body {
   margin: 0;
@@ -9,9 +12,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  color: var(--jb-dark);
+  background-color: var(--jb-light);
   background-image: url(../assets/images/bg_tile.jpg);
 }
 
