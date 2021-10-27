@@ -22,6 +22,8 @@ Databasen indeholder entiteterne authors, books og users, der indlæses i et **m
 
 Databasen resettes hver gang applikationen genstartes.
 
+Denne database model medfører at database adgang foregår synkront, idet databasen er indlæst i memory
+
 ## Build og run backend
 
 production mode
