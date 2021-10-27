@@ -1,21 +1,32 @@
 <nav class="navbar navbar-expand-md bg-light navbar-light">
 
-  <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Brand and toggle get grouped for better mobile display -->
 
-  <a data-testid="brand" class="navbar-brand" href="/#">Bookstore Backend</a>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul id="navbar" class="navbar-nav mr-auto">
-      <li data-testid="home" class="nav-item"><a class="nav-link" href="/">Home</a></li>
-      <li data-testid="frontend" class="nav-item"><a class="nav-link" href="http://localhost:8080">Frontend</a></li>
-      <li data-testid="map-object" class="nav-item"><a class="nav-link" href="#">Map Object</a></li>
-      <li data-testid="xmlhttp" class="nav-item"><a class="nav-link" href="#">XMLHttp</a></li>
-      <li data-testid="readfiles" class="nav-item"><a class="nav-link" href="#">ReadFiles</a></li>
-      <li data-testid="route-events" class="nav-item"><a class="nav-link" href="#">Route Events</a></li>
-      <li data-testid="promise" class="nav-item"><a class="nav-link" href="#">Promise</a></li>
-      <li data-testid="xmldemo" class="nav-item"><a class="nav-link" href="#">xmldemo</a></li>
-      <li data-testid="local-storage" class="nav-item"><a class="nav-link" href="#">LocalStorage</a></li>
-    </ul>
-  </div>
+    <div class="container-fluid">
+        <a data-testid="brand" class="navbar-brand" href="/#">Backend</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample04" aria-controls="navbarsExample04"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul data-testid="navbar" id="navbar" class="navbar-nav me-auto mb-2 mb-md-0">
+                <li data-testid="home" class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                <li data-testid="frontend" class="nav-item"><a class="nav-link active" href="http://localhost:8080">Frontend</a>
+                </li>
+                <li data-testid="map-object" class="nav-item"><a class="nav-link disabled" href="#">Map Object</a></li>
+                <li data-testid="xmlhttp" class="nav-item"><a class="nav-link  disabled" href="#">XMLHttp</a></li>
+                <li data-testid="readfiles" class="nav-item"><a class="nav-link  disabled" href="#">ReadFiles</a></li>
+                <li data-testid="route-events" class="nav-item"><a class="nav-link disabled" href="#">Route Events</a>
+                </li>
+                <li data-testid="promise" class="nav-item"><a class="nav-link disabled" href="#">Promise</a></li>
+                <li data-testid="xmldemo" class="nav-item"><a class="nav-link disabled" href="#">xmldemo</a></li>
+                <li data-testid="local-storage" class="nav-item"><a class="nav-link disabled" href="#">LocalStorage</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
