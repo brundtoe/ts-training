@@ -17,15 +17,24 @@
                 <li data-testid="home" class="nav-item"><a class="nav-link active" href="/">Home</a></li>
                 <li data-testid="frontend" class="nav-item"><a class="nav-link active" href="http://localhost:8080">Frontend</a>
                 </li>
-                <li data-testid="map-object" class="nav-item"><a class="nav-link disabled" href="#">Map Object</a></li>
-                <li data-testid="xmlhttp" class="nav-item"><a class="nav-link  disabled" href="#">XMLHttp</a></li>
-                <li data-testid="readfiles" class="nav-item"><a class="nav-link  disabled" href="#">ReadFiles</a></li>
-                <li data-testid="route-events" class="nav-item"><a class="nav-link disabled" href="#">Route Events</a>
-                </li>
                 <li data-testid="promise" class="nav-item"><a class="nav-link disabled" href="#">Promise</a></li>
                 <li data-testid="xmldemo" class="nav-item"><a class="nav-link disabled" href="#">xmldemo</a></li>
-                <li data-testid="local-storage" class="nav-item"><a class="nav-link disabled" href="#">LocalStorage</a>
+
+                <li class="nav-item dropdown">
+                    <a data-testid="templates" href="#" class="nav-link dropdown-toggle"
+                       data-bs-toggle="dropdown">TS Webpack</a>
+                    <ul data-testid="dropdown" class="dropdown-menu">
+                        <li data-testid="map-object" class="dropdown-item"><a class="nav-link disabled" href="#">Map Object</a></li>
+                        <li data-testid="xmlhttp" class="dropdown-item"><a class="nav-link  disabled" href="#">XMLHttp</a></li>
+                        <li data-testid="readfiles" class="dropdown-item"><a class="nav-link  disabled" href="#">ReadFiles</a></li>
+                        <li data-testid="route-events" class="dropdown-item"><a class="nav-link disabled" href="#">Route Events</a>
+                        </li>
+                        <li data-testid="local-storage" class="dropdown-item"><a class="nav-link disabled" href="#">LocalStorage</a>
+                        </li>
+                    </ul>
                 </li>
+
+
             </ul>
         </div>
     </div>
