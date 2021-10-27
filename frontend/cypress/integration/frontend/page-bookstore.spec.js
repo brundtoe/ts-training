@@ -5,7 +5,7 @@ describe('Testing Bookstore page',() => {
 
     it('should have topmenu', () => {
         cy.get('[data-testid="brand"]')
-            .contains('Bookstore Backend')
+            .contains('Backend')
             .should('have.class','navbar-brand')
 
         cy.get('[data-testid="home"]').contains('Home')
