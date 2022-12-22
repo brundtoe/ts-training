@@ -72,6 +72,8 @@ docker build -t ts-config:prod .
 Imaget rebuildes hver gang der foretages opdateringer af node_modules 
 
 ## test med Cypress
+Filen cypress.config.js må ikke være .ts, da webpack-dev-server kompilerer denne til en js fil. Da finder Cypress to config filer og fejler.
+
 Der foretages kun end2end test.
 
 - start frontend dev server
