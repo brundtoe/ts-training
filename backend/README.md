@@ -4,7 +4,7 @@ Anvendes i forbindelse med træning i at anvende TypeScript
 
 **Work in Progress**
 
-## opdatering oktober 2021
+## Opdatering oktober 2021
 
 - node packages er opdateret
 
@@ -32,7 +32,7 @@ production mode
 - npm start-prod     (Backend run prod)
 
 Development mode
-- npm run start-dev
+- npm run start-dev   (Backend ts-node dev)
 
 Databasen er tilgængelig via http://localhost:3300/bookstore
 
@@ -44,7 +44,7 @@ Backend tests med jest. Run test med:
 
 ## Test med Cypress
 
-Cypres anvendes primært til test af frontend. Der er en enkelt test script som demo for test af backend.
+Cypress anvendes primært til test af frontend. Der er en enkelt test script som demo for test af backend.
 
 Test scripts er placeret i frontend hvor cypress er installeret
 

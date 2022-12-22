@@ -2,7 +2,7 @@
   <configuration default="false" name="Handlebars demo" type="js.build_tools.npm">
     <package-json value="$PROJECT_DIR$/hbars-demo/package.json" />
     <command value="start" />
-    <node-interpreter value="project" />
+    <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.12.1/bin/node" />
     <envs />
     <method v="2" />
   </configuration>
