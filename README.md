@@ -4,9 +4,9 @@ Træningsprojekt i anvendelse af typeScript
 
 Projektet består af en frontend og en backend, der begge er skrevet i TypeScript
 
-frontend runnes med **http-server**
+Frontend runnes med **http-server**
 
-backend er en Node.js Expess applikation
+Backend er en Node.js Expess applikation
 
 Databasen er en json fil bookstore.json. De tre entiteter (authors, books og users) indlæses til tre Map objekter.
 
@@ -65,12 +65,20 @@ Frontend startes:
 Backend browser:  http://localhost:3000
 frontend browser: http://localhost:8080
 
-## Run docker enviroment
-Der er tre forskellige løsninger
+## Run docker environment
+Backend image skal re-buildes, når node packages er opdateret
 
-**Den første model** francoisromain kræver, at URI i frontend anvender **window.location.origin**.
-
+```shell
+cd backend 
+docker build -t ts-backend:prod .
 ```
+
+### Model Francois Romain
+
+Opdater frontend/src/util/config.ts
+- URI i frontend anvender **window.location.origin**.
+
+```shell
 cd backend
 npm run build-node
 cd frontend 
@@ -82,26 +90,27 @@ docker-compose up -d
 Frontend: http://localhost:8080
 Backend:  http://localhost:3300
 
-nginx lytter på port 8080 og port 3300
+Nginx lytter på port 8080 og port 3300
 
-Den næste model kræver at **URI til backend (http://localhost:3300)** anvendes i scripts på frontend **opdater frontend/util/config.ts**
+### docker compose frontend og backend
 
-**Run frontend hhv backend docker-compose.yml**
+Opdater frontend/src/util/config.ts
+- URI i frontend anvender http://localhost:3300
+
+**Run backend hhv frontend docker-compose.yml**
 
 ```
 cd backend 
 docker build -t ts-backend:prod .
 docker-compose -f docker-backend.yml up -d
-```
 
-```
 cd ../frontend
 npm run build
 docker-compose -f docker-frontend.yml up -d
 ```
 
 Frontend: http://localhost
-Backend: http://localhost:3000
+Backend: http://localhost:3300
 
 Modellen kan anvendes hvis der kun er behov for at starte frontend eller backend
 
