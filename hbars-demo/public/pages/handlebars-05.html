@@ -32,7 +32,7 @@
     import {fetchJson} from "../scripts/modules/fetchJson.js";
     import loadView from "../scripts/client/loadView.js";
 
-    const url = 'http://localhost:3300/bookstore/authors/sample/14'
+    const url = 'http://localhost:3300/api/authors/sample/14'
     fetchJson(url).then((data) => {
         loadView(Handlebars, authorsView, data, 'data')
         console.log('hentet og indsat data på siden ')
