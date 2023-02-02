@@ -1,5 +1,0 @@
-{
-  "nodeVersion": "system",
-  "baseUrl": "http://localhost:3300",
-  "integrationFolder": "cypress/integration/backend"
-}
