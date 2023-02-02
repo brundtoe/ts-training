@@ -3,7 +3,7 @@
     <h1 class="display-4">Bøger i Bookstore</h1>
     <p class="lead">
         <!--suppress HtmlUnknownTarget -->
-      <a class="btn btn-primary btn-sm" href="/bookstore" role="button">Retur til Bookstore</a>
+      <a class="btn btn-primary btn-sm" href="/" role="button">Retur til Bookstore</a>
     </p>
     <p class="lead">Et udvalg af bøger på lager i Bookstore</p>
   </div>
@@ -13,7 +13,7 @@
       {{#each books}}
         <tr>
           <td>{{this.id}}</td>
-          <td><a href="/bookstore/books/{{this.id}}">{{this.title}}</a></td>
+          <td><a href="/api/books/{{this.id}}">{{this.title}}</a></td>
           <td>{{this.bookprice}}</td>
           <td>{{this.onhand}}</td>
         </tr>

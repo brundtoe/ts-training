@@ -11,7 +11,7 @@ function config () : configValue {
       host: 'localhost'
     },
     server: 'http://localhost:3300',
-    bookstore: 'http://localhost:3300/bookstore'
+    bookstore: 'http://localhost:3300'
   }
 
   if (process.env.DOCKER) {

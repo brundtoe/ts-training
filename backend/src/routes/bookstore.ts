@@ -13,9 +13,6 @@ import users from '../components/bookstore/usersController'
 import books from '../components/bookstore/booksController'
 import config from '../config'
 //const config = params()
-router.get('/', (req: Request, res: Response) => {
-    res.render('bookstore/index', {title: 'Bookstore', host: `${config.server}/bookstore`})
-})
 
 router.route('/authors/sample/:num')
     .get(authors.sample)

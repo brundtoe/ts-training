@@ -1,12 +1,27 @@
-<div class="container">
+<section class="container">
   <div class="col-sm-8">
     <h1 class="display-4">Hello, {{title}}!</h1>
-    <p class="lead">Dette er en prototype på TypeScript udgaven af jstraining-jasmine.</p>
+    <p class="lead">Dette er en prototype på TypeScript udgaven af js-bookstore.</p>
     <hr class="my-3">
     <p>Der anvendes Node.js Express med Handlebars som view engine.</p>
-    <p><!--suppress HtmlUnknownTarget -->
-        <a href="/bookstore">Bookstore databasen</a></p>
   </div>
-</div>
+  <!--suppress HtmlUnknownTarget -->
+  <div class="container">
+    <div class="col-sm-8">
+      <h1 class="display-4">{{title}}</h1>
+      <p class="lead">
+      </p>
+      <p class="lead">Databasen bookstore</p>
+      <p>Databasen består af en controller med en model for hver entitet</p>
+      <p>Data hentes fra en json fil og opdateringer resettes hver gang appen genstartes</p>
+    </div>
+    <div class="col-sm-8 border rounded">
+      <p> <a data-testid="authors-sample" href="{{host}}/api/authors/sample/12">Authors Sample</a></p>
+      <p> <a data-testid="books-sample" href="{{host}}/api/books/sample/12">Books Sample</a></p>
+      <p> <a data-testid="users-sample" href="{{host}}/api/users/sample/12">Users Sample</a></p>
+      <div id="content"></div>
+    </div>
+  </div>
+</section>
 
 

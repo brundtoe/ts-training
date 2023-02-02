@@ -6,7 +6,7 @@
 
 import app from '../app';
 import http from 'http';
-import errorHandler from 'errorhandler'
+//import errorHandler from 'errorhandler'
 import debug from 'debug'
 import {AddressInfo} from "net";
 import {Http2Server} from "http2";
@@ -16,7 +16,7 @@ debug('tsprototype:server');
  * Get port from environment and store in Express.
  */
 
-app.use(errorHandler())
+//app.use(errorHandler())
 
 const port: string  = normalizePort(process.env.PORT || '3300');
 app.set('port', port);

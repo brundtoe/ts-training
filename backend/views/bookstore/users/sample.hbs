@@ -3,7 +3,7 @@
     <h1 class="display-4">Alle kunder</h1>
     <p class="lead">
         <!--suppress HtmlUnknownTarget -->
-      <a class="btn btn-primary btn-sm" href="/bookstore" role="button">Retur til Bookstore</a>
+      <a class="btn btn-primary btn-sm" href="/" role="button">Retur til Bookstore</a>
     </p>
     <p class="lead">Alle kunder</p>
   </div>
@@ -13,7 +13,7 @@
       {{#each users}}
         <tr>
         <td>{{this.id}}</td>
-          <td><a href="/bookstore/users/{{this.id}}">{{this.name}}</a></td>
+          <td><a href="/api/users/{{this.id}}">{{this.name}}</a></td>
         <td>{{this.city}}</td>
         <td>{{this.state}}</td>
         <td>{{this.mail}}</td>
