@@ -7,6 +7,8 @@ Anvendes i forbindelse med træning i at anvende TypeScript
 ## Opdatering februar 2023
 
 - node packages er opdateret
+- frontend er fjernet
+- backend omlagt så adgang er http://localhost:3300/api
 
 ## Indhold
 
