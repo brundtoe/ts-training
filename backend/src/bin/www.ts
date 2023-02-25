@@ -5,11 +5,8 @@
  */
 
 import app from '../app';
-import http from 'http';
-//import errorHandler from 'errorhandler'
+import * as http from 'http';
 import debug from 'debug'
-import {AddressInfo} from "net";
-import {Http2Server} from "http2";
 debug('tsprototype:server');
 
 /**
@@ -18,7 +15,7 @@ debug('tsprototype:server');
 
 //app.use(errorHandler())
 
-const port: string  = normalizePort(process.env.PORT || '3300');
+const port: number  = normalizePort(process.env.PORT || '3300');
 app.set('port', port);
 
 
@@ -33,7 +30,9 @@ const server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+const host_address: string = process.env.HOST_ADDRESS || '127.0.0.1'
+
+server.listen(port, host_address);
 server.on('error', onError);
 server.on('listening', onListening);
 

@@ -6,15 +6,24 @@ Anvendes i forbindelse med træning i at anvende TypeScript
 
 ## Opdatering februar 2023
 
-- node packages er opdateret
-- frontend er fjernet
-- backend omlagt så adgang er http://localhost:3300/api
-
+- Node packages er opdateret
+- Frontend er fjernet
+- Backend omlagt så adgang er http://localhost:3300/api
+- Tilføjet environment variable som krævet af Ndoe.js >= 17
+ 
 ## Indhold
 
 Appen er opbygget på grundlag af en standard WebStorm Node.js Express app med Handlebars som view engine
 
 Backend er omlagt fra native JavaScript til TypeScript
+
+## environment
+
+Environment for appen er defineret i backend/src/.env
+
+For docker overrules det af backend/.env og docker-compose.yml anvendelse heraf
+
+Der er kun defineret en ip adresse for node serveren, som krævet af Node.js >= 17
 
 ## Databasen bookstore
 
