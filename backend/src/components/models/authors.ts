@@ -3,21 +3,6 @@ import {AuthorEntity, AuthorMap, AuthorResponse, statusCode} from './models_inte
 
 export default {
 
-    findById(author_id: number): AuthorResponse {
-        const data = getAuthors()
-        if (data.has(author_id)) {
-            return {
-                author: data.get(author_id),
-                status: statusCode.OK,
-                message: `Author ${author_id} er fundet`
-            }
-        }
-        return {
-            status: statusCode.NotFound,
-            message: `Author med nummer ${author_id} findes ikke`,
-        }
-    },
-
     findAll(): AuthorEntity[]  {
         let data: AuthorEntity[] = []
         try {
@@ -30,6 +15,21 @@ export default {
             return data
         } catch (err: any) {
             return []
+        }
+    },
+
+    findById(author_id: number): AuthorResponse {
+        const data = getAuthors()
+        if (data.has(author_id)) {
+            return {
+                author: data.get(author_id),
+                status: statusCode.OK,
+                message: `Author ${author_id} er fundet`
+            }
+        }
+        return {
+            status: statusCode.NotFound,
+            message: `Author med nummer ${author_id} findes ikke`,
         }
     },
 
