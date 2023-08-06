@@ -1,9 +1,8 @@
 import createError from 'http-errors';
 import express from 'express';
 import cors from 'cors'
-import { Request, Response, NextFunction} from "express";
-import path from 'path';
-import cookieParser = require('cookie-parser');
+import path from 'node:path';
+import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import * as exphbs from 'express-handlebars';
 import indexRouter from './routes';
