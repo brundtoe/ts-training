@@ -2,7 +2,7 @@ import authors from '../components/models/authors'
 import {AuthorResponse, statusCode} from '../components/models/models_interfaces'
 import createError from 'http-errors'
 
-function authorExists(author_id: number) {
+export default function authorExists(author_id: number) {
     try {
         const result: AuthorResponse = authors.findById(author_id)
         return result.status === statusCode.OK
@@ -11,4 +11,3 @@ function authorExists(author_id: number) {
     }
 }
 
-export {authorExists}

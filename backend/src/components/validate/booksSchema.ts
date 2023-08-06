@@ -1,6 +1,6 @@
 import Joi from 'joi'
 
-const booksSchema = Joi.object({
+export const booksSchema = Joi.object({
   _id: Joi.string().regex(/^[0-9a-fA-F]{24}$/,'Invalid ObjectId'),
 
   id: Joi.number()
@@ -36,5 +36,3 @@ const booksSchema = Joi.object({
     .max(99)
 
 })
-
-module.exports = booksSchema

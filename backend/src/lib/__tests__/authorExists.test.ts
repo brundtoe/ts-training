@@ -1,4 +1,4 @@
-import {authorExists} from '../authorExists'
+import authorExists from '../authorExists'
 
 describe("Does author exists", () => {
   test('author number 3 exists', async () => {

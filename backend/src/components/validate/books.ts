@@ -1,7 +1,7 @@
 import {Request, Response, NextFunction} from 'express'
-const createError = require('http-errors')
-const booksSchema = require('./booksSchema')
-const {authorExists} = require('../../lib/authorExists')
+import createError from 'http-errors'
+import {booksSchema} from './booksSchema'
+import authorExists from '../../lib/authorExists'
 import Joi from 'joi'
 
 module.exports = {

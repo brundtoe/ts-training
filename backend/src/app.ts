@@ -1,4 +1,4 @@
-const createError = require('http-errors');
+import createError from 'http-errors';
 import express from 'express';
 import cors from 'cors'
 import { Request, Response, NextFunction} from "express";
