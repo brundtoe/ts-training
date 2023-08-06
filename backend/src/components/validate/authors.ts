@@ -1,6 +1,6 @@
 import {Request, Response, NextFunction} from 'express'
-const createError = require('http-errors')
-const authorsSchema = require('./authorsSchema')
+import createError from 'http-errors'
+import {authorsSchema} from './authorsSchema'
 import Joi from 'joi'
 
 module.exports = {

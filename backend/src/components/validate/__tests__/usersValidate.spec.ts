@@ -1,5 +1,5 @@
 const validate = require('../users')
-const Joi = require('joi')
+import Joi from 'joi'
 
 describe('Validering af users schema', () => {
 
