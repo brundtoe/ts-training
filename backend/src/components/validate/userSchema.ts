@@ -32,4 +32,4 @@ const userSchema = Joi.object({
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net','nu'] } })
 })
 
-module.exports = userSchema
+export {userSchema}

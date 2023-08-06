@@ -1,6 +1,6 @@
 import {Request, Response, NextFunction} from 'express'
 import createError from 'http-errors'
-const userSchema = require('./userSchema')
+import {userSchema} from './userSchema'
 import Joi from 'joi'
 
 module.exports = {
