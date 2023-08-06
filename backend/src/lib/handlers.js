@@ -1,4 +1,4 @@
-const createError = require('http-errors')
+import createError from 'http-errors';
 
 module.exports = {
   notFound (req, res, next) {

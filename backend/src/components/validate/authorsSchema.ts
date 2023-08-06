@@ -22,4 +22,4 @@ const authorsSchema = Joi.object({
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net','nu'] } })
 })
 
-module.exports = authorsSchema
+export {authorsSchema}
