@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "lib": ["es2019"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "es2019",
+    "lib": ["es2023"],
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "target": "es2022",
     "sourceMap": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true
   }
 }
