@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../static')));
-const errorHandler = require('./lib/handlers')
+import errorHandler from './lib/handlers'
 app.get('/favicon.ico', (req, res) => res.status(204));
 app.use('/', indexRouter);
 app.use('/client', fetchRouter);
