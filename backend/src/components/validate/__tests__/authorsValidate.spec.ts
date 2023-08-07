@@ -139,7 +139,7 @@ describe('Validering af author schema', () => {
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
-    test('Should succeed with post book', async() => {
+    test('Should succeed with post author', async() => {
         mockRequest = {
             body: {
                 firstname: 'Jens',

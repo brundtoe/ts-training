@@ -6,7 +6,7 @@ const router = express.Router()
 import authors from '../components/bookstore/authorsController'
 
 import validateAuthors from '../components/validate/authors'
-const validateBooks = require('../components/validate/books')
+import validateBooks from '../components/validate/books'
 const validateUsers = require('../components/validate/users')
 
 import users from '../components/bookstore/usersController'

@@ -32,7 +32,8 @@ export default {
             Joi.assert(req.body, schema)
             next()
         } catch (err: any) {
-            next(createError(400, err))
+            res.status(400)
+            res.json(buildMessage(err.details[0].message))
         }
     },
     put: (req: Request, res: Response, next: NextFunction) => {
