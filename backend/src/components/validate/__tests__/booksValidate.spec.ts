@@ -47,7 +47,7 @@ describe('Validering af books schema', () => {
             error: {
                 type: 'VALIDATION_ERROR',
                 description: [
-                    `Værdien: ${book_id} er ikke et Book nummer`
+                    "\"value\" must be a number"
                 ]
             }
         }
@@ -88,7 +88,7 @@ describe('Validering af books schema', () => {
             error: {
                 type: 'VALIDATION_ERROR',
                 description: [
-                    `Værdien: ${book_id} er ikke et Book nummer`
+                    "\"value\" must be a number"
                 ]
             }
         }

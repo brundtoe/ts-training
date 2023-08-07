@@ -1,27 +1,8 @@
 import {Request, Response, NextFunction} from 'express'
-import createError from 'http-errors'
+
 import {authorsSchema} from './authorsSchema'
 import Joi from 'joi'
-
-function invalidNumber(num: string) {
-    return {
-        error: {
-            type: 'VALIDATION_ERROR',
-            description: [
-                `Værdien: ${num} er ikke et Author nummer`
-            ]
-        }
-    }
-}
-
-function buildMessage(message: string) {
-    return {
-        error: {
-            type: 'VALIDATION_ERROR',
-            description: [message]
-        }
-    }
-}
+import {invalidNumber, buildMessage} from './ErrorMessages'
 
 export default {
     post: (req: Request, res: Response, next: NextFunction) => {
@@ -33,7 +14,7 @@ export default {
             next()
         } catch (err: any) {
             res.status(400)
-            res.json(buildMessage(err.details[0].message))
+            res.json(buildMessage(err, 'VALIDATION_ERROR'))
         }
     },
     put: (req: Request, res: Response, next: NextFunction) => {
@@ -45,7 +26,7 @@ export default {
             next()
         } catch (err: any) {
             res.status(400)
-            res.json(buildMessage(err.details[0].message))
+            res.json(buildMessage(err, 'VALIDATION_ERROR'))
         }
     },
     show: (req: Request, res: Response, next: NextFunction) => {
@@ -55,7 +36,7 @@ export default {
             next()
         } catch (err: any) {
             res.status(400)
-            res.json(invalidNumber(req.params.id))
+            res.json(buildMessage(err, 'VALIDATION_ERROR'))
         }
     },
     delete: (req: Request, res: Response, next: NextFunction) => {
@@ -64,7 +45,7 @@ export default {
             next()
         } catch (err: any) {
             res.status(400)
-            res.json(invalidNumber(req.params.id))
+            res.json(buildMessage(err, 'VALIDATION_ERROR'))
         }
     }
 

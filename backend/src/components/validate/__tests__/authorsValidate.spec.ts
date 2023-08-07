@@ -48,8 +48,8 @@ describe('Validering af author schema', () => {
         const expectedResponse = {
             error: {
                 type: 'VALIDATION_ERROR',
-                    description: [
-                    `Værdien: ${author_id} er ikke et Author nummer`
+                description: [
+                    "\"value\" must be a number"
                 ]
             }
         }
@@ -90,7 +90,7 @@ describe('Validering af author schema', () => {
             error: {
                 type: 'VALIDATION_ERROR',
                 description: [
-                    `Værdien: ${author_id} er ikke et Author nummer`
+                    "\"value\" must be a number"
                 ]
             }
         }
@@ -101,7 +101,7 @@ describe('Validering af author schema', () => {
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
-    test('Should succeed with put author', async() => {
+    test('Should succeed with put author', async () => {
         mockRequest = {
             body: {
                 id: 33,
@@ -116,7 +116,7 @@ describe('Validering af author schema', () => {
         expect(mockResponse.status).not.toHaveBeenCalled()
     })
 
-    test('Should fail to put author without lastname', async() => {
+    test('Should fail to put author without lastname', async () => {
         mockRequest = {
             body: {
                 id: 33,
@@ -139,7 +139,7 @@ describe('Validering af author schema', () => {
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
-    test('Should succeed with post author', async() => {
+    test('Should succeed with post author', async () => {
         mockRequest = {
             body: {
                 firstname: 'Jens',
@@ -153,7 +153,7 @@ describe('Validering af author schema', () => {
         expect(mockResponse.status).not.toHaveBeenCalled()
     })
 
-    test('Should fail to post author without firstname', async() => {
+    test('Should fail to post author without firstname', async () => {
         mockRequest = {
             body: {
                 lastname: 'Larsen',

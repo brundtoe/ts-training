@@ -3,26 +3,7 @@ import createError from 'http-errors'
 import {booksSchema} from './booksSchema'
 import authorExists from '../../lib/authorExists'
 import Joi from 'joi'
-
-function invalidNumber(num: string) {
-  return {
-    error: {
-      type: 'VALIDATION_ERROR',
-      description: [
-        `Værdien: ${num} er ikke et Book nummer`
-      ]
-    }
-  }
-}
-
-function buildMessage(message: string) {
-  return {
-    error: {
-      type: 'VALIDATION_ERROR',
-      description: [message]
-    }
-  }
-}
+import {invalidNumber, buildMessage} from './ErrorMessages'
 
 function authorNotFoundMessage(author_id: Number) {
   return {
@@ -48,7 +29,7 @@ export default {
       }
     } catch (err: any) {
       res.status(400)
-      res.json(buildMessage(err.details[0].message))
+      res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
   put: async (req: Request, res: Response, next: NextFunction) => {
@@ -66,7 +47,7 @@ export default {
       }
     } catch (err: any) {
       res.status(400)
-      res.json(buildMessage(err.details[0].message))
+      res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
   show: (req: Request, res: Response, next: NextFunction) => {
@@ -76,7 +57,7 @@ export default {
       next()
     } catch (err: any) {
       res.status(400)
-      res.json(invalidNumber(req.params.id))
+      res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
   delete: (req: Request, res: Response, next: NextFunction) => {
@@ -85,7 +66,7 @@ export default {
       next()
     } catch (err: any) {
       res.status(400)
-      res.json(invalidNumber(req.params.id))
+      res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   }
 
