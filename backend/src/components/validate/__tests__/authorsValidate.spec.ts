@@ -169,7 +169,7 @@ describe('Validering af author schema', () => {
                 ]
             }
         }
-        validate.put(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.post(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
         expect(mockResponse.json).toBeCalledWith(expectedResponse)
         expect(mockResponse.status).toBeCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()

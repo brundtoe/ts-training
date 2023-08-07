@@ -1,93 +1,183 @@
-const validate = require('../users')
+import validate from '../users'
 import Joi from 'joi'
+import {NextFunction, Request, Response} from "express";
 
 describe('Validering af users schema', () => {
 
-  const res = jest.fn()
-  const next = jest.fn()
+    let mockRequest: Partial<Request>;
+    let mockResponse: Partial<Response>;
+    let nextFunction: NextFunction = jest.fn()
+    const badRequest = 400
 
-  afterEach(() => {
-    jest.clearAllMocks()
-  })
+    beforeEach(() => {
+        mockRequest = {};
+        mockResponse = {
+            status: jest.fn(),
+            json: jest.fn()
+        }
+    })
 
-  test('Should succeed with user show', () => {
-    const req = {
-      params: {
-        id: 4
-      }
-    }
-    validate.show(req, res, next)
-    expect(next.mock.calls.length).toBe(1)
-    expect(next.mock.calls[0][0]).toBeUndefined()
-  })
+    test('Should succeed with user show', () => {
+        const user_id = '4'
 
-  test('Should fail to show with user string', () => {
-    const req = {
-      params: {
-        id: 'dummy'
-      }
-    }
-    validate.show(req,res,next)
-    expect(next.mock.calls.length).toBe(1)
-    expect(next.mock.calls[0][0]).toBeInstanceOf(Joi.ValidationError)
-    expect(next.mock.calls[0][0]).toMatchObject({ message: '"value" must be a number' })
-    expect(next.mock.calls[0][0]).toMatchObject({ status: 400 })
-  })
+        mockRequest = {
+            params: {
+                id: user_id
+            }
+        }
 
-  test('should validate delete with number', () => {
-    const req = {
-      params: {
-        id: 4
-      }
-    }
-    validate.delete(req,res,next)
-    expect(next.mock.calls.length).toBe(1)
-    expect(next.mock.calls[0][0]).toBeUndefined()
-  })
+        validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(nextFunction).toHaveBeenCalledTimes(1)
+        expect(mockResponse.json).not.toHaveBeenCalled()
+        expect(mockResponse.status).not.toHaveBeenCalled()
+    })
 
-  test('Should fail to delete with order string', () => {
-    const req = {
-      params: {
-        id: 'dummy'
-      }
-    }
-    validate.delete(req,res,next)
-    expect(next.mock.calls.length).toBe(1)
-    expect(next.mock.calls[0][0]).toBeInstanceOf(Joi.ValidationError)
-    expect(next.mock.calls[0][0]).toMatchObject({ message: '"value" must be a number' })
-    expect(next.mock.calls[0][0]).toMatchObject({ status: 400 })
-  })
+    test('Should fail with user number as a string', () => {
 
+        const user_id = 'dummy'
 
-  test('Should succeed with post order', () => {
-    const req = {
-      body: {
-        name: 'Jens Andersen',
-        city: 'Nakskov',
-        state: 'Lolland',
-        country: 'DK',
-        mail: 'jens@exampl.com'
-      }
-    }
-    validate.post(req,res,next)
-    expect(next.mock.calls.length).toBe(1)
-    expect(next.mock.calls[0][0]).toBeUndefined()
-  })
+        mockRequest = {
+            params: {
+                id: user_id
+            }
+        }
 
-  test('Should succeed with put order', () => {
-    const req = {
-      body: {
-        _id: "5eef84a264ee594e266c8dd3",
-        id: 33,
-        name: 'Jens Andersen',
-        city: 'Nakskov',
-        state: 'Lolland',
-        country: 'DK',
-        mail: 'jens@exampl.com'
-      }
-    }
-    validate.put(req,res,next)
-    expect(next.mock.calls.length).toBe(1)
-    expect(next.mock.calls[0][0]).toBeUndefined()
-  })
+        const expectedResponse = {
+            error: {
+                type: 'VALIDATION_ERROR',
+                description: [
+                    `Værdien: ${user_id} er ikke et User nummer`
+                ]
+            }
+        }
+
+        validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(mockResponse.json).toBeCalledWith(expectedResponse)
+        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(nextFunction).not.toHaveBeenCalled()
+    })
+
+    test('Should succeed with user delete', () => {
+
+        const user_id = '4'
+
+        mockRequest = {
+            params: {
+                id: user_id
+            }
+        }
+
+        validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(nextFunction).toHaveBeenCalledTimes(1)
+        expect(mockResponse.json).not.toHaveBeenCalled()
+        expect(mockResponse.status).not.toHaveBeenCalled()
+    })
+
+    test('Should fail with user delete with invalid number', () => {
+
+        const user_id = 'dummy'
+
+        mockRequest = {
+            params: {
+                id: user_id
+            }
+        }
+
+        const expectedResponse = {
+            error: {
+                type: 'VALIDATION_ERROR',
+                description: [
+                    `Værdien: ${user_id} er ikke et User nummer`
+                ]
+            }
+        }
+
+        validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(mockResponse.json).toBeCalledWith(expectedResponse)
+        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(nextFunction).not.toHaveBeenCalled()
+    })
+
+    test('Should succeed with put user', async () => {
+        mockRequest = {
+            body: {
+                id: 3,
+                name: 'Alfred Coppel',
+                city: 'Malibu',
+                state: 'California',
+                country: 'USA',
+                mail: 'coppel@anymail.com'
+            }
+        }
+        validate.put(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(nextFunction).toHaveBeenCalledTimes(1)
+        expect(mockResponse.json).not.toHaveBeenCalled()
+        expect(mockResponse.status).not.toHaveBeenCalled()
+    })
+    test('Should fail to put user without city', async () => {
+        mockRequest = {
+            body: {
+                id: 3,
+                name: 'Alfred Coppel',
+                state: 'California',
+                country: 'USA',
+                mail: 'coppel@anymail.com'
+            }
+        }
+
+        const expectedResponse = {
+            error: {
+                type: 'VALIDATION_ERROR',
+                description: [
+                    "\"id\" missing required peer \"city\""
+                ]
+            }
+        }
+        validate.put(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(mockResponse.json).toBeCalledWith(expectedResponse)
+        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(nextFunction).not.toHaveBeenCalled()
+    })
+
+    test('Should succeed with post user', async () => {
+        mockRequest = {
+            body: {
+                id: 3,
+                name: 'Alfred Coppel',
+                city: 'Malibu',
+                state: 'California',
+                country: 'USA',
+                mail: 'coppel@anymail.com'
+            }
+        }
+        validate.post(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(nextFunction).toHaveBeenCalledTimes(1)
+        expect(mockResponse.json).not.toHaveBeenCalled()
+        expect(mockResponse.status).not.toHaveBeenCalled()
+    })
+
+    test('Should fail to post user without city', async () => {
+        mockRequest = {
+            body: {
+                id: 3,
+                name: 'Alfred Coppel',
+                state: 'California',
+                country: 'USA',
+                mail: 'coppel@anymail.com'
+            }
+        }
+
+        const expectedResponse = {
+            error: {
+                type: 'VALIDATION_ERROR',
+                description: [
+                    "\"name\" missing required peer \"city\""
+                ]
+            }
+        }
+        validate.post(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        expect(mockResponse.json).toBeCalledWith(expectedResponse)
+        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(nextFunction).not.toHaveBeenCalled()
+    })
 })

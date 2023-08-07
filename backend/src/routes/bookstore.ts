@@ -7,7 +7,7 @@ import authors from '../components/bookstore/authorsController'
 
 import validateAuthors from '../components/validate/authors'
 import validateBooks from '../components/validate/books'
-const validateUsers = require('../components/validate/users')
+import validateUsers from '../components/validate/users'
 
 import users from '../components/bookstore/usersController'
 import books from '../components/bookstore/booksController'
