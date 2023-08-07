@@ -3,46 +3,69 @@ import createError from 'http-errors'
 import {authorsSchema} from './authorsSchema'
 import Joi from 'joi'
 
-module.exports = {
-  post: (req: Request, res: Response, next: NextFunction) => {
+function invalidNumber(num: string) {
+    return {
+        error: {
+            type: 'VALIDATION_ERROR',
+            description: [
+                `Værdien: ${num} er ikke et Author nummer`
+            ]
+        }
+    }
+}
 
-    try {
-      const schema = authorsSchema
-        .with('firstname', ['lastname','mail'])
-      Joi.assert(req.body, schema)
-      next()
-    } catch (err: any) {
-      next(createError(400, err))
+function buildMessage(message: string) {
+    return {
+        error: {
+            type: 'VALIDATION_ERROR',
+            description: [message]
+        }
     }
-  },
-  put: (req: Request, res: Response, next: NextFunction) => {
+}
 
-    try {
-      const schema = authorsSchema
-        .with('_id',['id','firstname','lastname','mail'])
-      Joi.assert(req.body,schema )
-      next()
-    } catch (err: any) {
-      next(createError(400, err))
-    }
-  },
-  show: (req: Request, res: Response, next: NextFunction) => {
+export default {
+    post: (req: Request, res: Response, next: NextFunction) => {
 
-    try {
-      Joi.assert(req.params.id, Joi.number().integer().required().min(1))
-      next()
-    } catch (err: any) {
-      next(createError(400, err))
+        try {
+            const schema = authorsSchema
+                .with('firstname', ['lastname', 'mail'])
+            Joi.assert(req.body, schema)
+            next()
+        } catch (err: any) {
+            next(createError(400, err))
+        }
+    },
+    put: (req: Request, res: Response, next: NextFunction) => {
+
+        try {
+            const schema = authorsSchema
+                .with('id', ['firstname', 'lastname', 'mail'])
+            Joi.assert(req.body, schema)
+            next()
+        } catch (err: any) {
+            res.status(400)
+            res.json(buildMessage(err.details[0].message))
+        }
+    },
+    show: (req: Request, res: Response, next: NextFunction) => {
+
+        try {
+            Joi.assert(req.params.id, Joi.number().integer().required().min(1))
+            next()
+        } catch (err: any) {
+            res.status(400)
+            res.json(invalidNumber(req.params.id))
+        }
+    },
+    delete: (req: Request, res: Response, next: NextFunction) => {
+        try {
+            Joi.assert(req.params.id, Joi.number().integer().required().min(1))
+            next()
+        } catch (err: any) {
+            res.status(400)
+            res.json(invalidNumber(req.params.id))
+        }
     }
-  },
-  delete: (req: Request, res: Response, next: NextFunction) => {
-    try {
-      Joi.assert(req.params.id, Joi.number().integer().required().min(1))
-      next()
-    } catch (err: any) {
-      next(createError(400, err))
-    }
-  }
 
 }
 
