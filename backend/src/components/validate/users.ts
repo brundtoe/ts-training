@@ -2,12 +2,12 @@ import {Request, Response, NextFunction} from 'express'
 import {userSchema} from './userSchema'
 import Joi from 'joi'
 
-function invalidNumber(num: string) {
+function invalidNumber(num: string, entity: string) {
   return {
     error: {
       type: 'VALIDATION_ERROR',
       description: [
-        `Værdien: ${num} er ikke et User nummer`
+        `Værdien: ${num} er ikke et ${entity} nummer`
       ]
     }
   }
@@ -63,7 +63,7 @@ export default {
       next()
     } catch (err: any) {
       res.status(400)
-      res.json(invalidNumber(req.params.id))
+      res.json(invalidNumber(req.params.id, 'User'))
     }
   },
   delete: (req: Request, res: Response, next: NextFunction) => {
@@ -72,7 +72,7 @@ export default {
       next()
     } catch (err: any) {
       res.status(400)
-      res.json(invalidNumber(req.params.id))
+      res.json(invalidNumber(req.params.id, 'User'))
     }
   }
 
