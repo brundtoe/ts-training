@@ -159,11 +159,10 @@ describe('Validering af users schema', () => {
     test('Should fail to post user without city', async () => {
         mockRequest = {
             body: {
-                id: 3,
                 name: 'Alfred Coppel',
                 state: 'California',
                 country: 'USA',
-                mail: 'coppel@anymail.com'
+                mail: 'coppel@anymail.dk'
             }
         }
 
@@ -171,7 +170,7 @@ describe('Validering af users schema', () => {
             error: {
                 type: 'VALIDATION_ERROR',
                 description: [
-                    "\"name\" missing required peer \"city\""
+                    "\"mail\" must be a valid email",
                 ]
             }
         }

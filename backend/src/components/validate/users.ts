@@ -1,5 +1,4 @@
 import {Request, Response, NextFunction} from 'express'
-import createError from 'http-errors'
 import {userSchema} from './userSchema'
 import Joi from 'joi'
 
@@ -14,28 +13,33 @@ function invalidNumber(num: string) {
   }
 }
 
-function buildMessage(message: string) {
-  return {
-    error: {
-      type: 'VALIDATION_ERROR',
-      description: [message]
-    }
+interface ErrorMessage {
+  error: {
+    type: string,
+    description: string[]
   }
 }
-
+function  buildMessage (err: any, err_type: string) {
+  let error: ErrorMessage = {
+    error: {
+      type: err_type,
+      description: []
+    }
+  }
+  for (const item of err.details) {
+    error.error.description.push(item.message)
+  }
+  return error
+}
 export default {
   post: (req: Request, res: Response, next: NextFunction) => {
 
     try {
-      const schema = userSchema
-        .with('name', ['mail','city'])
-        .or('name','country')
-        .or('name','state')
-      Joi.assert(req.body, schema)
+      Joi.assert(req.body, userSchema, {abortEarly: false})
       next()
     } catch (err: any) {
       res.status(400)
-      res.json(buildMessage(err.details[0].message))
+      res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
   put: (req: Request, res: Response, next: NextFunction) => {
@@ -49,7 +53,7 @@ export default {
       next()
     } catch (err: any) {
       res.status(400)
-      res.json(buildMessage(err.details[0].message))
+      res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
   show: (req: Request, res: Response, next: NextFunction) => {
