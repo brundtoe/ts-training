@@ -14,13 +14,13 @@ function config () : configValue {
     bookstore: 'http://localhost:3300'
   }
 
-  if (process.env.DOCKER) {
+  if (process.env.PLATFORM === 'docker') {
     standard.db.host = 'mysql'
     return standard
   }
 
-  // pt er vagrant uændret som standard på hosten
-  if (process.env.VAGRANT) {
+  // pt er kvm uændret som standard på hosten
+  if (process.env.PLATFORM === 'kvm') {
     return standard
   }
 

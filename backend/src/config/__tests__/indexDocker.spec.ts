@@ -1,4 +1,4 @@
-process.env.DOCKER = 'true'
+process.env.PLATFORM = 'docker'
 import {configValue} from '../index.d'
 import config from '../index'
 

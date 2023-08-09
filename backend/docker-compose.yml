@@ -7,7 +7,7 @@ services:
     ports:
     - "3300:3300"
     environment:
-      DOCKER: 'true'
+      PLATFORM: 'docker'
       HOST_ADDRESS: ${HOST_ADDRESS}
     volumes:
     - ./dist:/usr/src/app/dist
