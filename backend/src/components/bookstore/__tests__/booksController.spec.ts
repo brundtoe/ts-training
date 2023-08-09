@@ -5,8 +5,7 @@ import config from '../../../config'
 import {BookEntity, BookResponse, statusCode} from "../../models/models_interfaces";
 
 interface BookControllerResponse {
-    data: BookResponse,
-    link: string
+    data: BookResponse
 }
 
 describe('Books Controller', function () {
@@ -95,8 +94,7 @@ describe('Books Controller', function () {
                 book: bookSample.get(id),
                 status: statusCode.OK,
                 message: `Book ${id} er fundet`
-            },
-            link: config.bookstore
+            }
         }
 
         booksController.show(req, res, next)
@@ -113,8 +111,7 @@ describe('Books Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `Book med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         booksController.show(req, res, next)
@@ -147,8 +144,7 @@ describe('Books Controller', function () {
                     book: sample,
                     status: statusCode.OK,
                     message: `Book ${id} er opdateret`
-                },
-                link: config.bookstore
+                }
             }
 
             booksController.update(req, res, next)
@@ -177,8 +173,7 @@ describe('Books Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `Book med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         booksController.update(req, res, next)
@@ -195,8 +190,7 @@ describe('Books Controller', function () {
             data: {
                 status: statusCode.OK,
                 message: `Slettet book ${id}`
-            },
-            link: config.bookstore
+            }
         }
 
         booksController.delete(req, res, next)
@@ -213,8 +207,7 @@ describe('Books Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `Book med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         booksController.delete(req, res, next)
@@ -244,8 +237,7 @@ describe('Books Controller', function () {
                 book: result,
                 status: statusCode.OK,
                 message: `Book ${result.id} er oprettet`
-            },
-            link: config.bookstore
+            }
         }
 
         booksController.save(req, res, next)

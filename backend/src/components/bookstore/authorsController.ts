@@ -42,7 +42,7 @@ export default {
             const author_id = parseInt(param)
             if (!Number.isInteger(author_id)) throw new Error(`Request param ${param} is not a number`)
             const data = authors.findById(author_id)
-            res.status(200).json({data, link: config.bookstore})
+            res.status(200).json({data})
         } catch (err: any) {
             next(err)
         }
@@ -53,7 +53,7 @@ export default {
             const author_id = parseInt(param)
             if (!Number.isInteger(author_id)) throw new Error(`Request param ${param} is not a number`)
             const data = authors.deleteById(author_id)
-            res.status(200).json({data, link: config.bookstore})
+            res.status(200).json({data})
         } catch (err: any) {
             next(err)
         }
@@ -68,7 +68,7 @@ export default {
         }
         try {
             const data = authors.updateById(author)
-            res.status(200).json({data, link: config.bookstore})
+            res.status(200).json({data})
         } catch (err: any) {
             next(err)
         }
@@ -84,7 +84,7 @@ export default {
         }
         try {
             const data = authors.save(author)
-            res.status(201).json({data, link: config.bookstore})
+            res.status(201).json({data})
 
         } catch (err: any) {
             next(err)

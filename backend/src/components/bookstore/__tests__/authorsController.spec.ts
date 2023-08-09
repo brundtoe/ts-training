@@ -4,8 +4,7 @@ import config from '../../../config'
 import {AuthorEntity, AuthorResponse, statusCode} from "../../models/models_interfaces";
 
 interface AuthorControllerResponse {
-    data: AuthorResponse,
-    link: string
+    data: AuthorResponse
 }
 
 describe('Authors Controller', function () {
@@ -88,8 +87,7 @@ describe('Authors Controller', function () {
                 author: sampleAuthors.get(id),
                 status: statusCode.OK,
                 message: `Author ${id} er fundet`
-            },
-            link: config.bookstore
+            }
         }
 
         authorsController.show(req, res, next)
@@ -106,8 +104,7 @@ describe('Authors Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `Author med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         authorsController.show(req, res, next)
@@ -143,8 +140,7 @@ describe('Authors Controller', function () {
                     author: updated,
                     status: statusCode.OK,
                     message: `Author ${sample.id} er opdateret`
-                },
-                link: config.bookstore
+                }
             }
 
             authorsController.update(req, res, next)
@@ -170,8 +166,7 @@ describe('Authors Controller', function () {
                 data: {
                     status: statusCode.NotFound,
                     message: `Author med nummer ${id} findes ikke`
-                },
-                link: config.bookstore
+                }
             }
 
             authorsController.update(req, res, next)
@@ -188,8 +183,7 @@ describe('Authors Controller', function () {
             data: {
                 status: statusCode.OK,
                 message: `Slettet author ${id}`
-            },
-            link: config.bookstore
+            }
         }
 
         authorsController.delete(req, res, next)
@@ -206,8 +200,7 @@ describe('Authors Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `Author med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         authorsController.delete(req, res, next)
@@ -234,8 +227,7 @@ describe('Authors Controller', function () {
                 author: result,
                 status: statusCode.OK,
                 message: `Author ${result.id} er oprettet`
-            },
-            link: config.bookstore
+            }
         }
 
         authorsController.save(req, res, next)

@@ -4,8 +4,7 @@ import config from '../../../config'
 import {UserEntity, UserResponse, statusCode} from "../../models/models_interfaces";
 
 interface UserControllerResponse {
-    data: UserResponse,
-    link: string
+    data: UserResponse
 }
 
 describe('Users Controller', function () {
@@ -90,8 +89,7 @@ describe('Users Controller', function () {
                 user: userSample.get(id),
                 status: statusCode.OK,
                 message: `User ${id} er fundet`
-            },
-            link: config.bookstore
+            }
         }
 
         usersController.show(req, res, next)
@@ -108,8 +106,7 @@ describe('Users Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `User med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         usersController.show(req, res, next)
@@ -141,8 +138,7 @@ describe('Users Controller', function () {
                     user: updated,
                     status: statusCode.OK,
                     message: `User ${sample.id} er opdateret`
-                },
-                link: config.bookstore
+                }
             }
 
             usersController.update(req, res, next)
@@ -163,8 +159,7 @@ describe('Users Controller', function () {
                 data: {
                     status: statusCode.NotFound,
                     message: `User med nummer ${id} findes ikke`
-                },
-                link: config.bookstore
+                }
             }
 
             usersController.update(req, res, next)
@@ -181,8 +176,7 @@ describe('Users Controller', function () {
             data: {
                 status: statusCode.OK,
                 message: `Slettet user ${id}`
-            },
-            link: config.bookstore
+            }
         }
 
         usersController.delete(req, res, next)
@@ -199,8 +193,7 @@ describe('Users Controller', function () {
             data: {
                 status: statusCode.NotFound,
                 message: `User med nummer ${id} findes ikke`
-            },
-            link: config.bookstore
+            }
         }
 
         usersController.delete(req, res, next)
@@ -228,8 +221,7 @@ describe('Users Controller', function () {
                 user: result,
                 status: statusCode.OK,
                 message: `User ${result.id} er oprettet`
-            },
-            link: config.bookstore
+            }
         }
 
         usersController.save(req, res, next)
