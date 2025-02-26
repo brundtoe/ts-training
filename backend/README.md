@@ -4,23 +4,8 @@ Anvendes i forbindelse med træning i at anvende TypeScript
 
 **Work in Progress**
 
-## Opdatering august 2023
+Se [Changelog](./CHANGELOG.md)
 
-- Refaktoreret fra require til import
-
-Der resterer et antal require statements fordi jest test cases pt ikke kan importere de pågældende moduler.
-Årsagen er at import statements medfører at typescript validerer type/interface definitioner hvilket require ikke gør
-mocks er eksempelvis ikke kompatible med type Request
-
-
-
-## Opdatering februar 2023
-
-- Node packages er opdateret
-- Frontend er fjernet
-- Backend omlagt så adgang er http://localhost:3300/api
-- Tilføjet environment variable som krævet af Node.js >= 17
- 
 ## Indhold
 
 Appen er opbygget på grundlag af en standard WebStorm Node.js Express app med Handlebars som view engine

@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "lib": ["es2023"],
-    "module": "Node16",
-    "moduleResolution": "node16",
-    "target": "es2022",
+    "lib": ["ES2023"],
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ES2023",
     "sourceMap": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
