@@ -9,12 +9,12 @@ client.test("Request executed successfully", function() {
 });
 
 client.test("Response content-type is json", function() {
-  var type = response.contentType.mimeType;
+  const type = response.contentType.mimeType;
   client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
 });
 
 client.test("Response author is Andrew Enfield", function() {
-  var author =  {
+  const author =  {
     id: 7,
     firstname: "Andrew",
     lastname: "Enfield",
@@ -37,7 +37,7 @@ client.test("Request executed successfully", function() {
 });
 
 client.test("Response content-type is json", function() {
-  var type = response.contentType.mimeType;
+  const type = response.contentType.mimeType;
   client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
 });
 %}

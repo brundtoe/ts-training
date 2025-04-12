@@ -11,8 +11,6 @@ import validateUsers from '../components/validate/users'
 
 import users from '../components/bookstore/usersController'
 import books from '../components/bookstore/booksController'
-import config from '../config'
-//const config = params()
 
 router.route('/authors/sample/:num')
     .get(authors.sample)

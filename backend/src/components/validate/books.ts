@@ -1,9 +1,8 @@
 import {Request, Response, NextFunction} from 'express'
-import createError from 'http-errors'
 import {booksSchema} from './booksSchema'
 import authorExists from '../../lib/authorExists'
 import Joi from 'joi'
-import {invalidNumber, buildMessage} from './ErrorMessages'
+import {buildMessage} from './ErrorMessages'
 
 function authorNotFoundMessage(author_id: Number) {
   return {

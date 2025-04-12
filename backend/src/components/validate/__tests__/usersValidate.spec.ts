@@ -1,5 +1,4 @@
 import validate from '../users'
-import Joi from 'joi'
 import {NextFunction, Request, Response} from "express";
 
 describe('Validering af users schema', () => {

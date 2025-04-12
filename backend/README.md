@@ -35,7 +35,7 @@ Denne database model medfører at database adgang foregår synkront, idet databa
 production mode
 
 - npm run build-node (Backend build)
-- npm start-prod     (Backend run prod)
+- npm run start-prod     (Backend run prod)
 
 Development mode
 - npm run start-dev   (Backend ts-node dev)

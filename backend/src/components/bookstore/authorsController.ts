@@ -1,7 +1,6 @@
 import {Request, Response, NextFunction} from 'express'
 
 import authors from '../models/authors'
-import config from '../../config'
 import {AuthorEntity} from "../models/models_interfaces";
 
 

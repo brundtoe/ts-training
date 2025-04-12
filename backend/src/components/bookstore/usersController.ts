@@ -1,7 +1,6 @@
 import {Request, Response, NextFunction} from 'express'
 import users from '../models/users'
 import {UserEntity} from '../models/models_interfaces'
-import config from '../../config'
 
 export default {
     index(req: Request, res: Response, next: NextFunction) {

@@ -1,6 +1,5 @@
 import {Request} from 'express'
 import authorsController from '../authorsController'
-import config from '../../../config'
 import {AuthorEntity, AuthorResponse, statusCode} from "../../models/models_interfaces";
 
 interface AuthorControllerResponse {

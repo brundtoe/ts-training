@@ -2,7 +2,7 @@ import {Request, Response, NextFunction} from 'express'
 
 import {authorsSchema} from './authorsSchema'
 import Joi from 'joi'
-import {invalidNumber, buildMessage} from './ErrorMessages'
+import {buildMessage} from './ErrorMessages'
 
 export default {
     post: (req: Request, res: Response, next: NextFunction) => {

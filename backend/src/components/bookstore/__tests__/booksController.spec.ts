@@ -1,7 +1,5 @@
 import {Request} from 'express'
 import booksController from '../booksController'
-
-import config from '../../../config'
 import {BookEntity, BookResponse, statusCode} from "../../models/models_interfaces";
 
 interface BookControllerResponse {

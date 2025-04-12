@@ -1,6 +1,5 @@
 import {Request} from 'express'
 import usersController from '../usersController'
-import config from '../../../config'
 import {UserEntity, UserResponse, statusCode} from "../../models/models_interfaces";
 
 interface UserControllerResponse {

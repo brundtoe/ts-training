@@ -1,8 +1,6 @@
 import {Request, Response, NextFunction} from 'express'
 import books from '../models/books'
 import {BookEntity} from "../models/models_interfaces";
-import config from '../../config'
-
 
 export default {
     index(req: Request, res: Response, next: NextFunction) {
