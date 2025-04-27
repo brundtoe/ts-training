@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run prod" type="js.build_tools.npm">
+  <configuration default="false" name="Run Prod" type="js.build_tools.npm">
     <package-json value="$PROJECT_DIR$/backend/package.json" />
     <command value="run" />
     <scripts>
