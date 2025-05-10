@@ -1,5 +1,12 @@
 # Changelog
 
+## Maj 2025
+
+Optimering af error handling
+- bin/www tilføjede process handling af unresolved promises og unhandled expectations
+- app.js forenklede error handling
+- errorhandler revideret er nu en enkelt funktion som error middleware
+
 ## Opdatering februar 2025
 
 Rename projekt root tsconfig.json til tsconfig-test.json
