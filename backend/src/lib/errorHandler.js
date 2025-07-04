@@ -1,6 +1,6 @@
 // noinspection JSUnusedLocalSymbols
 
-export default function (err, req, res, next) {
+export default function (err, req, res, _next) {
   let actual = {}
 
   if (err.error) {

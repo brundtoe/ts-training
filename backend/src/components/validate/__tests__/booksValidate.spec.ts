@@ -53,8 +53,8 @@ describe('Validering af books schema', () => {
         }
 
         validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -94,8 +94,8 @@ describe('Validering af books schema', () => {
         }
 
         validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -136,8 +136,8 @@ describe('Validering af books schema', () => {
             }
         }
         await validate.put(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -161,8 +161,8 @@ describe('Validering af books schema', () => {
             }
         }
         await validate.put(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -202,8 +202,8 @@ describe('Validering af books schema', () => {
             }
         }
         await validate.post(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -227,8 +227,8 @@ describe('Validering af books schema', () => {
             }
         }
         await validate.post(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 

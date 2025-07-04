@@ -8,10 +8,10 @@ interface BookControllerResponse {
 
 describe('Books Controller', function () {
 
-    const mockRequest = (params: any, body?: any) => ({
+    const mockRequest = (params: any, body?: any) => (({
         params,
         body
-    }) as Request
+    }) as Request)
 
     const next = jest.fn()
 

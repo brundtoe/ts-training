@@ -55,8 +55,8 @@ describe('Validering af author schema', () => {
         }
 
         validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -96,8 +96,8 @@ describe('Validering af author schema', () => {
         }
 
         validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -134,8 +134,8 @@ describe('Validering af author schema', () => {
             }
         }
         validate.put(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 
@@ -170,8 +170,8 @@ describe('Validering af author schema', () => {
             }
         }
         validate.post(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
-        expect(mockResponse.json).toBeCalledWith(expectedResponse)
-        expect(mockResponse.status).toBeCalledWith(badRequest)
+        expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
+        expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
     })
 

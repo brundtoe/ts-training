@@ -1,5 +1,13 @@
 # Changelog
 
+## 4. juli 2025
+
+Opgraderet til Express 5.1.0
+- udførte opgraderingskontrol ``npx @expressjs/codemod upgrade .``
+- der var ikke behov for manuelle ændringer
+
+Opgradering til jest 30.0 krævede ændring fra toBeCalledWith til toHaveBeenCalledWith
+
 ## Maj 2025
 
 Optimering af error handling
