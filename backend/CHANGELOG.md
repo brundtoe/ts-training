@@ -8,6 +8,8 @@ Opgraderet til Express 5.1.0
 
 Opgradering til jest 30.0 krævede ændring fra toBeCalledWith til toHaveBeenCalledWith
 
+Fjernede @types/express-handlebars, idet pakken er deprecated. Express-handlebars indeholder typ definitioner.
+
 ## Maj 2025
 
 Optimering af error handling
