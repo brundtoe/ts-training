@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../static')));
 
-app.get('/favicon.ico', (req, res) => res.status(204));
+//app.get('/favicon.ico', (req, res) => res.status(204));
 app.use('/', indexRouter);
 app.use('/client', fetchRouter);
 app.use('/api', bookstoreRouter)
