@@ -1,5 +1,11 @@
 # Changelog
 
+## 14. september 2025
+
+- skiftet til image node:jb-alpine - baseret på node:20-alpine3.21
+- Rettet fejl i Dockerfile owner af /usr/src/app
+- 
+
 ## 4. juli 2025
 
 Opgraderet til Express 5.1.0
