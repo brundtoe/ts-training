@@ -1,5 +1,9 @@
 # Changelog
 
+## 9. januar 2026
+
+Npm update typscript 5.9.1 - test ok
+
 ## 14. september 2025
 
 - skiftet til image node:jb-alpine - baseret på node:20-alpine3.21
