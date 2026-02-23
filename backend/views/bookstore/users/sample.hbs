@@ -1,27 +1,22 @@
-<div class="container">
-  <div class="col-sm-8">
-    <h1 class="display-4">Alle kunder</h1>
-    <p class="lead">
-        <!--suppress HtmlUnknownTarget -->
-      <a class="btn btn-primary btn-sm" href="/" role="button">Retur til Bookstore</a>
-    </p>
-    <p class="lead">Alle kunder</p>
-  </div>
-  <div class="col-sm-8 border rounded">
-    <table id="customers" class="table table-sm">
-        <tbody data-testid="users">
-      {{#each users}}
-        <tr>
+<div class="content">
+  <h1 class="display-4">Kunder i Bookstore</h1>
+  <p class="heading">
+    <!--suppress HtmlUnknownTarget -->
+    <a class="btn btn-primary btn-sm btn-link" href="/" role="button">Retur til Bookstore</a>
+  </p>
+  <p class="heading">Et udvalg af kunder</p>
+  <table id="customers" class="table table-striped">
+    <tbody data-testid="users">
+    {{#each users}}
+      <tr>
         <td>{{this.id}}</td>
-          <td><a href="/api/users/{{this.id}}">{{this.name}}</a></td>
+        <td><a href="/api/users/{{this.id}}">{{this.name}}</a></td>
         <td>{{this.city}}</td>
         <td>{{this.state}}</td>
         <td>{{this.mail}}</td>
-        </tr>
-      {{/each}}
-        </tbody>
-    </table>
-
-  </div>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
 </div>
 

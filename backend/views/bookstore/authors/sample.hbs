@@ -1,25 +1,20 @@
-<div class="container">
-  <div class="col-sm-8 ">
-    <h1 class="display-4">Forfattere i Bookstore</h1>
-    <p class="lead">
-        <!--suppress HtmlUnknownTarget -->
-      <a class="btn btn-primary btn-sm" href="/" role="button">Retur til Bookstore</a>
-    </p>
-    <p class="lead">Et udvalg af forfattere</p>
-  </div>
-  <div class="col-sm-8 border rounded">
-    <table id="data" class="table table-sm" >
-        <tbody data-testid="authors">
-      {{#each authors}}
-        <tr>
-          <td>{{this.id}}</td>
-          <td><a href="/api/authors/{{this.id}}">{{this.firstname}}</a></td>
-          <td>{{this.lastname}}</td>
-          <td>{{this.mail}}</td>
-        </tr>
-      {{/each}}
-        </tbody>
-    </table>
-  </div>
-</div>
+<div class="content">
+  <h3>Forfattere i Bookstore</h3>
+  <p class="heading">
+    <a class="btn btn-primary btn-sm btn-link" href="/">Retur til Bookstore</a>
+  </p>
+  <p class="heading">Et udvalg af forfattere</p>
 
+  <table id="data" class="table table-striped">
+    <tbody data-testid="authors">
+    {{#each authors}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td><a href="/api/authors/{{this.id}}">{{this.firstname}}</a></td>
+        <td>{{this.lastname}}</td>
+        <td>{{this.mail}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>

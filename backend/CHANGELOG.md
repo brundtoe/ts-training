@@ -1,8 +1,15 @@
 # Changelog
 
+## 23. februar 2026
+
+Ændringer
+- Udfaset bootstrap
+- menusystem med css styling
+
+
 ## 9. januar 2026
 
-Npm update typscript 5.9.1 - test ok
+Npm update TypeScript 5.9.1 – test ok
 
 ## 14. september 2025
 
