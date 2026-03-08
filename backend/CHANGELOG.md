@@ -1,5 +1,10 @@
 # Changelog
 
+## 8. marts 2026
+
+Ændringer
+- bookstore json data ændret åris for book 21 til 35.95
+
 ## 23. februar 2026
 
 Ændringer
