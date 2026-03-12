@@ -35,11 +35,14 @@ function getBooks() : BookMap {
     return books
 }
 
+/*
+Der indlæses bookstore.customers selvom der i ts-training anvendes users i stedet for customers
+ */
 function getUsers(): UserMap {
 
     try {
         if (users.size === 0) {
-            const result = bookstore.users
+            const result = bookstore.customers
             result.forEach((item) => {
                 users.set(item.id, item)
             })

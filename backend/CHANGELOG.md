@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.  marts 2026
+Ændringer
+- Skiftet til anvendelse af bookstore.json genereret i projekt data-demo
+- fetchMap.ts ændret bookstore.users til bookstore.customers
+
+
 ## 8. marts 2026
 
 Ændringer
