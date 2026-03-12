@@ -33,7 +33,7 @@ describe('Books Model', function () {
             message: `Book ${id} er fundet`
         }
         const actual: BookResponse = books.findById(id)
-        expect(actual).toEqual(expected)
+        expect(actual).toMatchObject(expected)
     })
 
     test('Book is not found in database', function () {

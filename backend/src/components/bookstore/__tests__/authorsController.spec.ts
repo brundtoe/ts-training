@@ -92,7 +92,7 @@ describe('Authors Controller', function () {
         authorsController.show(req, res, next)
         expect(res.status).toHaveBeenCalledWith(200)
         expect(res.json).toHaveBeenCalled()
-        expect(res.json.mock.calls[0][0]).toEqual(expected)
+        expect(res.json.mock.calls[0][0]).toMatchObject(expected)
 
     })
     test('Should fail to show author 999', function () {

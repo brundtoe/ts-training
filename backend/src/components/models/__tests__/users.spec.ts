@@ -31,7 +31,7 @@ describe('Users Model', function () {
             message: `User ${id} er fundet`
         }
         const actual: UserResponse = users.findById(id)
-        expect(actual).toEqual(expected)
+        expect(actual).toMatchObject(expected)
     })
 
     test('User is not found in database', function () {

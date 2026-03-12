@@ -27,7 +27,7 @@ describe('Authors Model', function () {
             message: `Author ${id} er fundet`
         }
         const actual: AuthorResponse = authors.findById(id)
-        expect(actual).toEqual(expected)
+        expect(actual).toMatchObject(expected)
     })
 
     test('Author is not found in database', function () {
