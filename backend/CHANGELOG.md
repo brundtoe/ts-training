@@ -5,6 +5,7 @@
 - Skiftet til anvendelse af bookstore.json genereret i projekt data-demo
 - fetchMap.ts ændret bookstore.users til bookstore.customers
 - testcases der tester actual og expected med toEqual ændret til toMatchObject. Ændringen foretaget fordi bookstore-json indeholder felterne created_at og updated_at som ikke er defineret i entities. Det var letteste løsning at bruge toMatchObject
+- oprydning fjernet ikke anvendt config index.js til mysql database
 
 ## 8. marts 2026
 
