@@ -33,7 +33,9 @@ describe('Books Controller', function () {
         published: '2009-12-01',
         bookprice: 32.99,
         isbn: '1874416826',
-        onhand: 26
+        onhand: 26,
+        created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+        updated_at: ''
     })
 
     bookSample.set(7, {
@@ -43,7 +45,9 @@ describe('Books Controller', function () {
         published: '1997-09-01',
         bookprice: 22.99,
         isbn: '1861000685',
-        onhand: 58
+        onhand: 58,
+        created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+        updated_at: ''
     })
 
     test('Index Should return all books', function () {
@@ -162,7 +166,9 @@ describe('Books Controller', function () {
             published: '2020-02-01',
             bookprice: 35.99,
             isbn: '1861003218',
-            onhand: 54
+            onhand: 54,
+            created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+            updated_at: ''
         }
 
         const req = mockRequest({}, sample)
@@ -222,7 +228,9 @@ describe('Books Controller', function () {
             published: '2020-02-01',
             bookprice: 35.99,
             isbn: '1861003218',
-            onhand: 54
+            onhand: 54,
+            created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+            updated_at: ''
         }
         const req = mockRequest({}, saved)
         const res = mockResponse()

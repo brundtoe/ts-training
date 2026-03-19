@@ -1,5 +1,15 @@
 # Changelog
 
+## 19. marts 2026
+
+Ændringer
+- implementeret created_at og updated_at i controllers
+- tilføjet jest.setup.js med definition af process.env.CREADTED_AT
+
+Kendte fejl
+- test af update og new author, book og user fejler, grundet implementeringen af created_at og updated_at.
+- det er ikke muligt at forudsige de aktuelle værdier af created_at og updated_at
+
 ## 12.  marts 2026
 Ændringer
 - Skiftet til anvendelse af bookstore.json genereret i projekt data-demo

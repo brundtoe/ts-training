@@ -30,14 +30,18 @@ describe('Authors Controller', function () {
         id: 5,
         firstname: "Alexander",
         lastname: "Nakhimovsky",
-        mail: "Nakhimovsky@mail.com"
+        mail: "Nakhimovsky@mail.com",
+        created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+        updated_at: ''
     })
 
     sampleAuthors.set(7, {
         "id": 7,
         "firstname": "Andrew",
         "lastname": "Enfield",
-        "mail": "Enfield@mail.com"
+        "mail": "Enfield@mail.com",
+        created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+        updated_at: ''
     })
 
     test('Index Should return all authors', function () {
@@ -130,7 +134,9 @@ describe('Authors Controller', function () {
                 id: sample.id,
                 firstname: 'William',
                 lastname: 'Johnson',
-                mail: sample.mail
+                mail: sample.mail,
+                created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+                updated_at:""
             }
             const req = mockRequest({}, updated)
             const res = mockResponse()
@@ -213,7 +219,9 @@ describe('Authors Controller', function () {
             id: id,
             firstname: 'Katrine',
             lastname: 'Andersen',
-            mail: 'katrine@example.com'
+            mail: 'katrine@example.com',
+            created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+            updated_at: ''
         }
         const req = mockRequest({}, saved)
         const res = mockResponse()

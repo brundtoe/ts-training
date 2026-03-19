@@ -2,7 +2,7 @@ import {Request, Response, NextFunction} from 'express'
 
 import authors from '../models/authors'
 import {AuthorEntity} from "../models/models_interfaces";
-
+import {getDateTime} from '../../lib/getDateTime';
 
 export default {
     index(req: Request, res: Response, next: NextFunction) {
@@ -63,7 +63,9 @@ export default {
             id: req.body.id,
             firstname: req.body.firstname,
             lastname: req.body.lastname,
-            mail: req.body.mail
+            mail: req.body.mail,
+            created_at: req.body.created_at,
+            updated_at: getDateTime()
         }
         try {
             const data = authors.updateById(author)
@@ -79,7 +81,9 @@ export default {
             id: 0,
             firstname: req.body.firstname,
             lastname: req.body.lastname,
-            mail: req.body.mail
+            mail: req.body.mail,
+            created_at: getDateTime(),
+            updated_at: ""
         }
         try {
             const data = authors.save(author)

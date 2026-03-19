@@ -1,6 +1,7 @@
 import {Request, Response, NextFunction} from 'express'
 import books from '../models/books'
 import {BookEntity} from "../models/models_interfaces";
+import {getDateTime} from '../../lib/getDateTime';
 
 export default {
     index(req: Request, res: Response, next: NextFunction) {
@@ -65,7 +66,9 @@ export default {
             published: req.body.published,
             bookprice: parseFloat(req.body.bookprice),
             isbn: req.body.isbn,
-            onhand: parseInt(req.body.onhand)
+            onhand: parseInt(req.body.onhand),
+            created_at: req.body.created_at,
+            updated_at: getDateTime()
 
         }
         try {
@@ -85,7 +88,9 @@ export default {
             published: req.body.published,
             bookprice: parseFloat(req.body.bookprice),
             isbn: req.body.isbn,
-            onhand: parseInt(req.body.onhand)
+            onhand: parseInt(req.body.onhand),
+            created_at: getDateTime(),
+            updated_at: ""
         }
 
         try {

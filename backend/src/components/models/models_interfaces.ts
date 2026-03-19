@@ -2,14 +2,16 @@ export interface AuthorEntity {
     id: number,
     firstname: string,
     lastname: string,
-    mail: string
+    mail: string,
+    created_at: string,
+    updated_at: string
 }
 
 export type AuthorMap = Map<number, AuthorEntity>
 
 export interface EntityResponse {
     status: number,
-        message?: string
+    message?: string
 
 }
 
@@ -29,13 +31,15 @@ export interface BookEntity {
     published: string,
     bookprice: number,
     isbn: string,
-    onhand: number
+    onhand: number,
+    created_at: string,
+    updated_at: string
 }
 
 export type BookMap = Map<number, BookEntity>
 
-export interface BookResponse  extends EntityResponse {
-   book?: BookEntity
+export interface BookResponse extends EntityResponse {
+    book?: BookEntity
 }
 
 export interface UserEntity {
@@ -44,12 +48,14 @@ export interface UserEntity {
     city: string,
     state: string,
     country: string,
-    mail: string
+    mail: string,
+    created_at: string,
+    updated_at: string
 }
 
 export type UserMap = Map<number, UserEntity>
 
-export interface UserResponse  extends EntityResponse  {
+export interface UserResponse extends EntityResponse {
     user?: UserEntity,
 }
 
