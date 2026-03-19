@@ -132,13 +132,15 @@ describe('Users Controller', function () {
         const id = 5
         const sample = userSample.get(id)
         if (sample) {
-            const updated = Object.assign({}, sample)
-            updated.name = 'Charles Dickens'
+            const updated = Object.assign(sample, {name: 'Charles Dickens'})
+
             const req = mockRequest({}, updated)
             const res = mockResponse()
+            sample.updated_at = process.env.ACTUAL_DATE || ''
+
             const expected: UserControllerResponse = {
                 data: {
-                    user: updated,
+                    user: sample,
                     status: statusCode.OK,
                     message: `User ${sample.id} er opdateret`
                 }
@@ -147,6 +149,9 @@ describe('Users Controller', function () {
             usersController.update(req, res, next)
             expect(res.status).toHaveBeenCalledWith(200)
             expect(res.json).toHaveBeenCalled()
+            const actual = res.json.mock.calls[0][0]
+            const actualDate = actual.data.user.updated_at.slice(0, 10)
+            actual.data.user.updated_at = actualDate
             expect(res.json.mock.calls[0][0]).toEqual(expected)
         }
     })
@@ -220,6 +225,7 @@ describe('Users Controller', function () {
 
         const result = Object.assign({}, user)
         result.id = 29
+        result.created_at = process.env.ACTUAL_DATE || ''
 
         const expected: UserControllerResponse = {
             data: {
@@ -233,6 +239,9 @@ describe('Users Controller', function () {
 
         expect(next).not.toHaveBeenCalled()
         expect(res.status).toHaveBeenCalledWith(201)
+        const actual = res.json.mock.calls[0][0]
+        const actualDate = actual.data.user.created_at.slice(0, 10)
+        actual.data.user.created_at = actualDate
         expect(res.json).toHaveBeenCalledWith(expected)
     })
 

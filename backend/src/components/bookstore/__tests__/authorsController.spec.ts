@@ -130,19 +130,18 @@ describe('Authors Controller', function () {
 
         const sample = sampleAuthors.get(5)
         if (sample) {
-            const updated = {
-                id: sample.id,
+            const updated = Object.assign(sample,{
                 firstname: 'William',
                 lastname: 'Johnson',
-                mail: sample.mail,
-                created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
-                updated_at:""
-            }
+            } )
+
             const req = mockRequest({}, updated)
             const res = mockResponse()
+                sample.updated_at = process.env.ACTUAL_DATE || ''
+
             const expected: AuthorControllerResponse = {
                 data: {
-                    author: updated,
+                    author: sample,
                     status: statusCode.OK,
                     message: `Author ${sample.id} er opdateret`
                 }
@@ -151,6 +150,9 @@ describe('Authors Controller', function () {
             authorsController.update(req, res, next)
             expect(res.status).toHaveBeenCalledWith(200)
             expect(res.json).toHaveBeenCalled()
+            const actual = res.json.mock.calls[0][0]
+            const actualDate = actual.data.author.updated_at.slice(0, 10)
+            actual.data.author.updated_at = actualDate
             expect(res.json.mock.calls[0][0]).toEqual(expected)
         }
     })
@@ -213,14 +215,14 @@ describe('Authors Controller', function () {
         expect(res.json.mock.calls[0][0]).toEqual(expected)
     })
 
-    test('Should succced in saving new author', function () {
+    test('Should succeed in saving new author', function () {
         const id = 0
         const saved = {
             id: id,
             firstname: 'Katrine',
             lastname: 'Andersen',
             mail: 'katrine@example.com',
-            created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+            created_at: '',
             updated_at: ''
         }
         const req = mockRequest({}, saved)
@@ -228,7 +230,7 @@ describe('Authors Controller', function () {
 
         const result = Object.assign({}, saved)
         result.id = 29
-
+        result.created_at = process.env.ACTUAL_DATE || ''
         const expected: AuthorControllerResponse = {
             data: {
                 author: result,
@@ -241,6 +243,9 @@ describe('Authors Controller', function () {
 
         expect(next).not.toHaveBeenCalled()
         expect(res.status).toHaveBeenCalledWith(201)
+        const actual = res.json.mock.calls[0][0]
+        const actualDate = actual.data.author.created_at.slice(0, 10)
+        actual.data.author.created_at = actualDate
         expect(res.json).toHaveBeenCalledWith(expected)
     })
 

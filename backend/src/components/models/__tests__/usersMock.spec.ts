@@ -11,7 +11,9 @@ userSample.set(5,  {
     city: "Miami",
     state: "Florida",
     country: "USA",
-    mail: "sheldon@anymail.com"
+    mail: "sheldon@anymail.com",
+    created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+    updated_at: ''
 })
 
 userSample.set(7, {
@@ -20,7 +22,9 @@ userSample.set(7, {
     city: "Hollywood",
     state: "California",
     country: "USA",
-    mail: "forsyth@anymail.com"
+    mail: "forsyth@anymail.com",
+    created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+    updated_at: ''
 })
 
 describe('Mocking User model', function () {
@@ -105,7 +109,9 @@ describe('Mocking User model', function () {
             city: "Pensacola",
             state: "Florida",
             country: "USA",
-            mail: "francis@anymail.com"
+            mail: "francis@anymail.com",
+            created_at: '',
+            updated_at: ''
         }
 
         const actual: UserResponse = users.save(user)

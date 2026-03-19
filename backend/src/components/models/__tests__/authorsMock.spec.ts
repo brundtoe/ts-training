@@ -9,14 +9,18 @@ persons.set(5, {
     id: 5,
     firstname: "Alexander",
     lastname: "Nakhimovsky",
-    mail: "Nakhimovsky@mail.com"
+    mail: "Nakhimovsky@mail.com",
+    created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+    updated_at: ''
 })
 
 persons.set(7, {
-    "id": 7,
-    "firstname": "Andrew",
-    "lastname": "Enfield",
-    "mail": "Enfield@mail.com"
+    id: 7,
+    firstname: "Andrew",
+    lastname: "Enfield",
+    mail: "Enfield@mail.com",
+    created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+    updated_at: ''
 })
 
 describe('Mocking Author model', function () {
@@ -99,7 +103,9 @@ describe('Mocking Author model', function () {
             id: 0,
             firstname: 'Jens',
             lastname: 'Larsen',
-            mail: 'jens@example.com'
+            mail: 'jens@example.com',
+            created_at: '',
+            updated_at: ''
         }
 
         const actual: AuthorResponse = authors.save(person)

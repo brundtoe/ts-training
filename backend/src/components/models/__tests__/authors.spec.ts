@@ -7,14 +7,18 @@ persons.set(5, {
     id: 5,
     firstname: "Alexander",
     lastname: "Nakhimovsky",
-    mail: "Nakhimovsky@mail.com"
+    mail: "Nakhimovsky@mail.com",
+    created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+    updated_at: ''
 })
 
 persons.set(7, {
-    "id": 7,
-    "firstname": "Andrew",
-    "lastname": "Enfield",
-    "mail": "Enfield@mail.com"
+    id: 7,
+    firstname: "Andrew",
+    lastname: "Enfield",
+    mail: "Enfield@mail.com",
+    created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+    updated_at: ''
 })
 
 describe('Authors Model', function () {
@@ -95,16 +99,19 @@ describe('Authors Model', function () {
 
     test('Fails to update an unknown Author', function () {
         const id = 99
-        const person =  {
+        const person = {
             id: id,
             firstname: "Alexander",
             lastname: "Nakhimovsky",
-            mail: "Nakhimovsky@mail.com"
+            mail: "Nakhimovsky@mail.com",
+            created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+            updated_at: ''
+
         }
         const expected: AuthorResponse = {
             status: statusCode.NotFound,
             message: `Author med nummer ${id} findes ikke`
-            }
+        }
 
         const actual: AuthorResponse = authors.updateById(person)
         expect(actual).toEqual(expected)
@@ -116,7 +123,9 @@ describe('Authors Model', function () {
             id: 0,
             firstname: 'Maria',
             lastname: 'Magdalene',
-            mail: 'maria@example.com'
+            mail: 'maria@example.com',
+            created_at: '',
+            updated_at: ''
         }
         const actual = authors.save(person)
         const id = 29

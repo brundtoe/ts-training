@@ -136,11 +136,12 @@ describe('Books Controller', function () {
         const id = 5
         const sample = bookSample.get(id)
         if (sample) {
-            sample.title = 'Ruby on Rails 3rd Edition'
-            sample.published = '2020-03-09'
+            const updated = Object.assign(sample, {title : 'Ruby on Rails 3rd Edition', published : '2020-03-09'
+            })
 
-            const req = mockRequest({}, sample)
+            const req = mockRequest({}, updated)
             const res = mockResponse()
+            sample.updated_at = process.env.ACTUAL_DATE || ''
             const expected: BookControllerResponse = {
                 data: {
                     book: sample,
@@ -152,6 +153,9 @@ describe('Books Controller', function () {
             booksController.update(req, res, next)
             expect(res.status).toHaveBeenCalledWith(200)
             expect(res.json).toHaveBeenCalled()
+            const actual = res.json.mock.calls[0][0]
+            const actualDate = actual.data.book.updated_at.slice(0, 10)
+            actual.data.book.updated_at = actualDate
             expect(res.json.mock.calls[0][0]).toEqual(expected)
         }
     })
@@ -219,7 +223,7 @@ describe('Books Controller', function () {
         expect(res.json.mock.calls[0][0]).toEqual(expected)
     })
 
-    test('Should succced in saving new book', function () {
+    test('Should succeed in saving new book', function () {
         const id = 49
         const saved: BookEntity = {
             id: 0,
@@ -229,7 +233,7 @@ describe('Books Controller', function () {
             bookprice: 35.99,
             isbn: '1861003218',
             onhand: 54,
-            created_at: process.env.CREATED_AT || '2023-09-01 18:01:02',
+            created_at: '',
             updated_at: ''
         }
         const req = mockRequest({}, saved)
@@ -237,6 +241,7 @@ describe('Books Controller', function () {
 
         const result = Object.assign({}, saved)
         result.id = id
+        result.created_at = process.env.ACTUAL_DATE || ''
 
         const expected: BookControllerResponse = {
             data: {
@@ -250,6 +255,9 @@ describe('Books Controller', function () {
 
         expect(next).not.toHaveBeenCalled()
         expect(res.status).toHaveBeenCalledWith(201)
+        const actual = res.json.mock.calls[0][0]
+        const actualDate = actual.data.book.created_at.slice(0, 10)
+        actual.data.book.created_at = actualDate
         expect(res.json).toHaveBeenCalledWith(expected)
     })
 

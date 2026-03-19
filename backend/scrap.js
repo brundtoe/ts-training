@@ -3,5 +3,7 @@ function getActualDate() {
   const pad = (n) => String(n).padStart(2, '0');
   return `${updated_at.getFullYear()}-${pad(updated_at.getMonth() + 1)}-${pad(updated_at.getDate())}`;
 }
-process.env.CREATED_AT="2025-07-29 16:00:00"
-process.env.ACTUAL_DATE = getActualDate()
+const dato = getActualDate()
+const actual ='2026-03-19 18:01:02'
+const modified = actual.slice(0,10)
+console.log(modified === dato)
