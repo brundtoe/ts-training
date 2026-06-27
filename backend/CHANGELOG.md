@@ -1,5 +1,9 @@
 # Changelog
 
+## 27. juni 2026
+
+- bookstore.json opdateret created_At som ISO 8601 String
+
 ## 19. marts 2026
 
 Ændringer
