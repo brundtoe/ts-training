@@ -13,6 +13,9 @@ function authorNotFoundMessage(author_id: Number) {
   }
 
 }
+
+export type IdRequest = Request<{ id: string }>
+
 export default {
   post: async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -49,7 +52,7 @@ export default {
       res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
-  show: (req: Request, res: Response, next: NextFunction) => {
+  show: (req: Request<{id:string}>, res: Response, next: NextFunction) => {
 
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
@@ -59,7 +62,7 @@ export default {
       res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
-  delete: (req: Request, res: Response, next: NextFunction) => {
+  delete: (req: Request<{id:string}>, res: Response, next: NextFunction) => {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()

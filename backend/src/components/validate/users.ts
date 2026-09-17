@@ -3,6 +3,8 @@ import {userSchema} from './userSchema'
 import Joi from 'joi'
 import {invalidNumber, buildMessage} from './ErrorMessages'
 
+export type IdRequest = Request<{ id: string }>
+
 export default {
   post: (req: Request, res: Response, next: NextFunction) => {
 
@@ -28,7 +30,7 @@ export default {
       res.json(buildMessage(err, 'VALIDATION_ERROR'))
     }
   },
-  show: (req: Request, res: Response, next: NextFunction) => {
+  show: (req: Request<{id: string}>, res: Response, next: NextFunction) => {
 
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
@@ -38,7 +40,7 @@ export default {
       res.json(invalidNumber(req.params.id, 'User'))
     }
   },
-  delete: (req: Request, res: Response, next: NextFunction) => {
+  delete: (req: Request<{id:string}>, res: Response, next: NextFunction) => {
     try {
       Joi.assert(req.params.id, Joi.number().integer().required().min(1))
       next()

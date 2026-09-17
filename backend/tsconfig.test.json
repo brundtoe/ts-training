@@ -5,12 +5,14 @@
     {
       "path": "./src"}
   ],
-  "exclude": ["node_modules"],
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
+    "module": "esnext",
+    "target": "esnext",
+    "types": ["node"],
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
+    "outDir": "dist",
+    "rootDir": "src",
     "resolveJsonModule": true,
   }
 }

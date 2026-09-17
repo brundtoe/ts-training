@@ -1,18 +1,23 @@
-import validate from '../users'
+import {describe, expect, test, jest, beforeEach} from '@jest/globals'
+import validate, {IdRequest} from '../users'
 import {NextFunction, Request, Response} from "express";
+import type {Mock} from "jest-mock";
 
 describe('Validering af users schema', () => {
 
-    let mockRequest: Partial<Request>;
-    let mockResponse: Partial<Response>;
+    let mockRequest: Partial<IdRequest>;
+    let mockResponse: Partial<Response> & {
+        status: Mock<(code: number) => Response>;
+        json: Mock;
+    };
     let nextFunction: NextFunction = jest.fn()
     const badRequest = 400
 
     beforeEach(() => {
         mockRequest = {};
         mockResponse = {
-            status: jest.fn(),
-            json: jest.fn()
+            status: jest.fn<(code: number) => Response>().mockReturnThis(),
+            json: jest.fn<(body?: unknown) => Response>()
         }
     })
 
@@ -25,7 +30,7 @@ describe('Validering af users schema', () => {
             }
         }
 
-        validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.show(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(nextFunction).toHaveBeenCalledTimes(1)
         expect(mockResponse.json).not.toHaveBeenCalled()
         expect(mockResponse.status).not.toHaveBeenCalled()
@@ -50,7 +55,7 @@ describe('Validering af users schema', () => {
             }
         }
 
-        validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.show(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
         expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
@@ -66,7 +71,7 @@ describe('Validering af users schema', () => {
             }
         }
 
-        validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.delete(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(nextFunction).toHaveBeenCalledTimes(1)
         expect(mockResponse.json).not.toHaveBeenCalled()
         expect(mockResponse.status).not.toHaveBeenCalled()
@@ -91,7 +96,7 @@ describe('Validering af users schema', () => {
             }
         }
 
-        validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.delete(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
         expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()

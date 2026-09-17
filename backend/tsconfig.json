@@ -1,15 +1,21 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "lib": ["ES2023"],
-    "module": "NodeNext",
+    "lib": ["es2024"],
+    "module": "nodenext",
     "moduleResolution": "nodenext",
-    "target": "ES2023",
+    "target": "es2024",
     "sourceMap": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/__tests__/**"]
 }

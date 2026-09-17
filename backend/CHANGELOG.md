@@ -1,5 +1,11 @@
 # Changelog
 
+## 17. september 2026
+
+- Opdateret til TypeScript 6.0.3
+- test cases aligned med projekt ts6-training
+
+
 ## 27. juni 2026
 
 - bookstore.json opdateret created_At som ISO 8601 String

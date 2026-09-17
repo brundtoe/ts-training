@@ -1,19 +1,22 @@
+import {describe, expect, test, jest, beforeEach} from '@jest/globals'
 import {Request, Response, NextFunction} from "express";
 
-import validate from '../authors'
-
+import validate, {IdRequest} from '../authors'
+import type {Mock} from "jest-mock";
 describe('Validering af author schema', () => {
 
-    let mockRequest: Partial<Request>;
-    let mockResponse: Partial<Response>;
-    let nextFunction: NextFunction = jest.fn()
+    let mockRequest: Partial<IdRequest>;
+    let mockResponse: Partial<Response> & {
+        status: Mock<(code: number) => Response>;
+        json: Mock;
+    };    let nextFunction: NextFunction = jest.fn()
     const badRequest = 400
 
     beforeEach(() => {
         mockRequest = {};
         mockResponse = {
-            status: jest.fn(),
-            json: jest.fn()
+            status: jest.fn<(code: number) => Response>().mockReturnThis(),
+            json: jest.fn<(body?: unknown) => Response>()
         }
     })
 

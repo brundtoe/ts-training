@@ -13,7 +13,7 @@ export default {
             next(err)
         }
     },
-    sample(req: Request, res: Response, next: NextFunction) {
+    sample(req: Request<{ num: string }>, res: Response, next: NextFunction) {
         const param = req.params.num
         try {
             const num: number = parseInt(param)
@@ -35,7 +35,7 @@ export default {
             next(err)
         }
     },
-    show(req: Request, res: Response, next: NextFunction) {
+    show(req: Request<{ id: string }>, res: Response, next: NextFunction) {
         const param = req.params.id
         try {
             const author_id = parseInt(param)
@@ -46,7 +46,7 @@ export default {
             next(err)
         }
     },
-    delete(req: Request, res: Response, next: NextFunction) {
+    delete(req: Request<{ id: string }>, res: Response, next: NextFunction) {
         const param = req.params.id
         try {
             const author_id = parseInt(param)

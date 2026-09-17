@@ -2,11 +2,12 @@
   "name": "tsprototype",
   "version": "0.0.0",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "start": "node dist/bin/www.js",
-    "build-node": "rm -rf ./dist && npx tsc --build src/tsconfig.json ",
+    "build-node": "rm -rf ./dist && npx tsc --build tsconfig.json ",
     "start-prod": "nodemon dist/bin/www.js",
-    "start-dev": "NODE_ENV=development ts-node --project src/tsconfig.json ./src/bin/www.ts",
+    "start-dev": "NODE_ENV=development ts-node --project tsconfig.json ./src/bin/www.ts",
     "test": "jest"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "morgan": "~1.10"
   },
   "devDependencies": {
+    "@jest/globals": "^30.5.1",
     "@types/cookie-parser": "~1.4",
     "@types/cors": "~2.8",
     "@types/debug": "~4.1",
@@ -36,6 +38,6 @@
     "nodemon": "~3.1",
     "ts-jest": "~29.4",
     "ts-node": "~10.9",
-    "typescript": "~5.9"
+    "typescript": "6.0.3"
   }
 }

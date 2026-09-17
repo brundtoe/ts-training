@@ -4,6 +4,8 @@ import {authorsSchema} from './authorsSchema'
 import Joi from 'joi'
 import {buildMessage} from './ErrorMessages'
 
+export type IdRequest = Request<{ id: string }>
+
 export default {
     post: (req: Request, res: Response, next: NextFunction) => {
 

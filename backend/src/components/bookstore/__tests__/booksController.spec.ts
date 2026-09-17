@@ -1,17 +1,18 @@
+import {describe, expect, test, jest} from '@jest/globals'
 import {Request} from 'express'
 import booksController from '../booksController'
 import {BookEntity, BookResponse, statusCode} from "../../models/models_interfaces";
-
+import {ParamsDictionary} from "express-serve-static-core";
 interface BookControllerResponse {
     data: BookResponse
 }
 
 describe('Books Controller', function () {
 
-    const mockRequest = (params: any, body?: any) => (({
+    const mockRequest = <P extends ParamsDictionary | object = ParamsDictionary>(params: P, body?: any) => (({
         params,
         body
-    }) as Request)
+    }) as unknown as Request<P>)
 
     const next = jest.fn()
 

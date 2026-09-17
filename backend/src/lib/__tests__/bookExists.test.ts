@@ -1,4 +1,5 @@
-const {bookExists} = require('../bookExists')
+import {describe, expect, test} from '@jest/globals'
+import {bookExists} from '../bookExists'
 
 describe("Does book exists", () => {
   test('book number 3 exists', async () => {
