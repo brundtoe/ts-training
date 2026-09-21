@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Build_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Docker_build_ts_backend_prod.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Docker_run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Dev.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Prod.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Victoria_All_tests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ts-training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ts-training.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ecosystem.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/httpRequests/authorsController.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/jest.setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/scrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/bin/www.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/__tests__/authorsController.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/__tests__/booksController.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/__tests__/usersController.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/authorsController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/booksController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/usersController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/data/bookstore.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/authors.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/authorsMock.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/books.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/booksMock.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/users.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/usersMock.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/authors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/books.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/fetchMap.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/models_interfaces.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/models/users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/ErrorMessages.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/__tests__/authorsValidate.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/__tests__/booksValidate.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/__tests__/usersValidate.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/authors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/authorsSchema.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/books.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/booksSchema.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/userSchema.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/lib/__tests__/authorExists.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/lib/__tests__/bookExists.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/lib/authorExists.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/lib/bookExists.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/lib/errorHandler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/lib/getDateTime.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/bookstore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/fetch.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/static/stylesheets/basis.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/static/stylesheets/layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/ts-training.code-workspace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tsconfig.test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tsconfig.tsbuildinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/bookstore/authors/sample.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/bookstore/books/sample.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/bookstore/users/sample.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/error.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/index.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/layouts/main.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views/partials/topnav.hbs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="76" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0197900191614473" />
+      <entry key="MS500" value="1.5831551734269853" />
+      <entry key="S2" value="2.8740465566366975" />
+      <entry key="S5" value="4.351199121386884" />
+      <entry key="S10" value="6.040473064195567" />
+      <entry key="S30" value="10.023322123333356" />
+      <entry key="S60" value="14.743930037780354" />
+      <entry key="M2" value="20.411530196548256" />
+      <entry key="M5" value="30.612848529891373" />
+      <entry key="M10" value="43.604190483911125" />
+      <entry key="M15" value="51.855709231270275" />
+      <entry key="M30" value="63.73327686979442" />
+      <entry key="H1" value="71.5530189678988" />
+      <entry key="H2" value="76.05238486322865" />
+      <entry key="H4" value="78.46733821410092" />
+      <entry key="D1" value="80.56946418511352" />
+      <entry key="W1" value="80.93828518526901" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.8366243937287237" />
+      <entry key="MS500" value="1.5369406671871655" />
+      <entry key="S2" value="2.8580442896712297" />
+      <entry key="S5" value="4.342827974638928" />
+      <entry key="S10" value="6.035072970581918" />
+      <entry key="S30" value="10.020425632958744" />
+      <entry key="S60" value="14.741766605831957" />
+      <entry key="M2" value="20.409826200663247" />
+      <entry key="M5" value="30.610665477173196" />
+      <entry key="M10" value="43.6019029788318" />
+      <entry key="M15" value="51.853696712188444" />
+      <entry key="M30" value="63.731933471028356" />
+      <entry key="H1" value="71.55223999150964" />
+      <entry key="H2" value="76.05196508067785" />
+      <entry key="H4" value="78.46712027103163" />
+      <entry key="D1" value="80.56942670016589" />
+      <entry key="W1" value="80.9382798012677" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3JdusujigiMC22UWtfhBQT7Ic9D" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Docker run.executor": "Run",
+    "Jest.Jest All Tests.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Shell Script.Docker build image.executor": "Run",
+    "Shell Script.Fjern Containere.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/projects/sourcecode/javascript/ts-training/docker-compose.yml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/home/projects/sourcecode/javascript/ts-training/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "npm.Build Prod and run.executor": "Run",
+    "npm.Build.executor": "Run",
+    "npm.Run Dev.executor": "Run",
+    "npm.Victoria test.executor": "Run",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/projects/sourcecode/javascript/ts-training/node_modules/typescript/lib"
+  }
+}]]></component>
+  <component name="RunManager" selected="Docker.Docker Run Prod">
+    <configuration name="Jest All Tests" type="JavaScriptTestRunnerJest">
+      <node-interpreter value="project" />
+      <node-options value="--experimental-vm-modules --localstorage-file=./jest-storage" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--forceExit --detectOpenHandles" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker build image" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="docker build -t ts6-training:jb-prod ." />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Fjern Containere" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="fjern-containere" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Run Prod" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Fjern Containere" run_configuration_type="ShConfigurationType" />
+      </method>
+    </configuration>
+    <configuration name="Build Prod and run" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start-prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Build" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build-node" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start-dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Victoria test" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="test" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.Docker Run Prod" />
+      <item itemvalue="Jest.Jest All Tests" />
+      <item itemvalue="npm.Build Prod and run" />
+      <item itemvalue="npm.Run Dev" />
+      <item itemvalue="npm.Victoria test" />
+      <item itemvalue="npm.Build" />
+      <item itemvalue="Shell Script.Fjern Containere" />
+      <item itemvalue="Shell Script.Docker build image" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="" />
+      <created>1790003476857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790003476857</updated>
+      <workItem from="1790003477895" duration="1500000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

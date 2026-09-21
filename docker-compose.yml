@@ -1,0 +1,27 @@
+
+services:
+  backend:
+    image: ts6-training:jb-prod
+    container_name: ts-training
+    ports:
+    - "3300:3300"
+    environment:
+      PLATFORM: 'docker'
+      HOST_ADDRESS: ${HOST_ADDRESS}
+    volumes:
+    - ./dist:/usr/src/app/dist
+    - ./views:/usr/src/app/views
+    - ./static:/usr/src/app/static
+    restart: always
+    networks:
+      default:
+        ipv4_address: ${HOST_ADDRESS}
+
+networks:
+  default:
+    external: true
+    name: humle_net
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.18.0.0/16"
