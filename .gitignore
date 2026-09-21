@@ -2,10 +2,10 @@
 /out-tsc
 
 /node_modules
+/jest-storage*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /.pnp
 .pnp.js
 
-.vscode/*

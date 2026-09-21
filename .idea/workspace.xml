@@ -4,89 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Build_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Docker_build_ts_backend_prod.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Docker_run.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Dev.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Prod.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Victoria_All_tests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ts-training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ts-training.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ecosystem.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/httpRequests/authorsController.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/jest.setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/scrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/app.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/bin/www.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/__tests__/authorsController.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/__tests__/booksController.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/__tests__/usersController.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/authorsController.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/booksController.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/bookstore/usersController.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/data/bookstore.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/authors.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/authorsMock.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/books.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/booksMock.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/users.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/__tests__/usersMock.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/authors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/books.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/fetchMap.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/models_interfaces.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/models/users.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/ErrorMessages.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/__tests__/authorsValidate.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/__tests__/booksValidate.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/__tests__/usersValidate.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/authors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/authorsSchema.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/books.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/booksSchema.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/userSchema.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/components/validate/users.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/__tests__/authorExists.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/__tests__/bookExists.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/authorExists.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/bookExists.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/errorHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/lib/getDateTime.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/bookstore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/fetch.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/static/stylesheets/basis.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/static/stylesheets/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ts-training.code-workspace" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tsconfig.test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tsconfig.tsbuildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/bookstore/authors/sample.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/bookstore/books/sample.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/bookstore/users/sample.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/error.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/index.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/layouts/main.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/views/partials/topnav.hbs" beforeDir="false" />
+    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="Applikationen er flyttet fra mappen backend til ts-training.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest-storage" beforeDir="false" afterPath="$PROJECT_DIR$/jest-storage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest-storage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/jest-storage-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest-storage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/jest-storage-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,23 +29,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0197900191614473" />
-      <entry key="MS500" value="1.5831551734269853" />
-      <entry key="S2" value="2.8740465566366975" />
-      <entry key="S5" value="4.351199121386884" />
-      <entry key="S10" value="6.040473064195567" />
-      <entry key="S30" value="10.023322123333356" />
-      <entry key="S60" value="14.743930037780354" />
-      <entry key="M2" value="20.411530196548256" />
-      <entry key="M5" value="30.612848529891373" />
-      <entry key="M10" value="43.604190483911125" />
-      <entry key="M15" value="51.855709231270275" />
-      <entry key="M30" value="63.73327686979442" />
-      <entry key="H1" value="71.5530189678988" />
-      <entry key="H2" value="76.05238486322865" />
-      <entry key="H4" value="78.46733821410092" />
-      <entry key="D1" value="80.56946418511352" />
-      <entry key="W1" value="80.93828518526901" />
+      <entry key="MS100" value="1.0000000270461786" />
+      <entry key="MS500" value="1.0317230238367077" />
+      <entry key="S2" value="2.1395663300666126" />
+      <entry key="S5" value="5.5302151167188605" />
+      <entry key="S10" value="9.222188977736979" />
+      <entry key="S30" value="14.08777865233534" />
+      <entry key="S60" value="16.169801916796608" />
+      <entry key="M2" value="19.79636501389788" />
+      <entry key="M5" value="31.58552995085414" />
+      <entry key="M10" value="47.3019726265256" />
+      <entry key="M15" value="57.83833252812076" />
+      <entry key="M30" value="73.89295310484283" />
+      <entry key="H1" value="85.01511093427521" />
+      <entry key="H2" value="91.60314239091072" />
+      <entry key="H4" value="95.19395922336739" />
+      <entry key="D1" value="98.3501259713549" />
+      <entry key="W1" value="98.906772515833" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -144,23 +67,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8366243937287237" />
-      <entry key="MS500" value="1.5369406671871655" />
-      <entry key="S2" value="2.8580442896712297" />
-      <entry key="S5" value="4.342827974638928" />
-      <entry key="S10" value="6.035072970581918" />
-      <entry key="S30" value="10.020425632958744" />
-      <entry key="S60" value="14.741766605831957" />
-      <entry key="M2" value="20.409826200663247" />
-      <entry key="M5" value="30.610665477173196" />
-      <entry key="M10" value="43.6019029788318" />
-      <entry key="M15" value="51.853696712188444" />
-      <entry key="M30" value="63.731933471028356" />
-      <entry key="H1" value="71.55223999150964" />
-      <entry key="H2" value="76.05196508067785" />
-      <entry key="H4" value="78.46712027103163" />
-      <entry key="D1" value="80.56942670016589" />
-      <entry key="W1" value="80.9382798012677" />
+      <entry key="MS100" value="3.4235953836360694E-8" />
+      <entry key="MS500" value="0.03778353467371244" />
+      <entry key="S2" value="1.395211034915746" />
+      <entry key="S5" value="5.099241465845483" />
+      <entry key="S10" value="8.97273213311326" />
+      <entry key="S30" value="13.995129834724112" />
+      <entry key="S60" value="16.122074221386868" />
+      <entry key="M2" value="19.771924045804305" />
+      <entry key="M5" value="31.574761523818907" />
+      <entry key="M10" value="47.29552498972914" />
+      <entry key="M15" value="57.83351155139585" />
+      <entry key="M30" value="73.89013724644286" />
+      <entry key="H1" value="85.01356247831794" />
+      <entry key="H2" value="91.60232668609115" />
+      <entry key="H4" value="95.19354009707617" />
+      <entry key="D1" value="98.35005446857534" />
+      <entry key="W1" value="98.9067622596632" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -204,7 +127,7 @@
     "ts.external.directory.path": "/home/projects/sourcecode/javascript/ts-training/node_modules/typescript/lib"
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.Docker Run Prod">
+  <component name="RunManager" selected="Jest.Jest All Tests">
     <configuration name="Jest All Tests" type="JavaScriptTestRunnerJest">
       <node-interpreter value="project" />
       <node-options value="--experimental-vm-modules --localstorage-file=./jest-storage" />
@@ -317,8 +240,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1790003476857</updated>
-      <workItem from="1790003477895" duration="1500000" />
+      <workItem from="1790003477895" duration="2645000" />
     </task>
+    <task id="LOCAL-00001" summary="Applikationen er flyttet fra mappen backend til ts-training.">
+      <option name="closed" value="true" />
+      <created>1790005023510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790005023510</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,5 +266,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Applikationen er flyttet fra mappen backend til ts-training." />
+    <option name="LAST_COMMIT_MESSAGE" value="Applikationen er flyttet fra mappen backend til ts-training." />
   </component>
 </project>
