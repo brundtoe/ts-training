@@ -20,6 +20,15 @@ For docker overrules det af backend/.env og docker-compose.yml anvendelse heraf
 
 Der er kun defineret en ip adresse for node serveren, som krævet af Node.js >= 17
 
+Denne warning under test med Jest
+
+    experimentalwarning: localStorage is not available because --localstorage-file was not provided
+
+Fjernes med node option
+
+    --localstorage-file=./jest-storage
+
+
 ## Databasen bookstore
 
 Der anvendes filen json-data/bookstore.json som backend database.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 21. september 2026
+
+Denne warning
+    experimentalwarning: localStorage is not available because --localstorage-file was not provided
+fjernes med node option
+    --localstorage-file=./jest-storage
+
+    
 ## 17. september 2026
 
 - Opdateret til TypeScript 6.0.3
