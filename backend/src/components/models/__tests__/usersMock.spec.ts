@@ -1,8 +1,14 @@
 import {describe, expect, test, jest, beforeEach, afterAll} from '@jest/globals'
-jest.mock('../fetchMap')
-const fetchMap = require('../fetchMap')
-import users from '../users'
-import {UserEntity, UserResponse, statusCode} from "../models_interfaces";
+import {AuthorMap, BookMap, UserEntity, UserMap, UserResponse, statusCode} from "../models_interfaces";
+
+jest.unstable_mockModule('../fetchMap', () => ({
+    getAuthors: jest.fn<() => AuthorMap>(),
+    getBooks: jest.fn<() => BookMap>(),
+    getUsers: jest.fn<() => UserMap>(),
+}))
+
+const {getUsers} = await import('../fetchMap')
+const {default: users} = await import('../users')
 
 const userSample = new Map<number, UserEntity>()
 
@@ -38,10 +44,11 @@ describe('Mocking User model', function () {
         message: errorMessage
     }
 
-    let usersSpy: any
+    const usersSpy = jest.mocked(getUsers)
+
 
     beforeEach(() => {
-        usersSpy = jest.spyOn(fetchMap, 'getUsers')
+        usersSpy.mockReset()
     })
 
     afterAll(() => {
@@ -50,7 +57,7 @@ describe('Mocking User model', function () {
 
     test('No users are found', function () {
 
-        usersSpy.mockReturnValue([])
+        usersSpy.mockReturnValue(new Map)
         const actual = users.findAll()
         expect(usersSpy).toHaveBeenCalled()
         expect(actual).toEqual([])

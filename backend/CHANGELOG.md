@@ -3,9 +3,15 @@
 ## 21. september 2026
 
 Denne warning
+
     experimentalwarning: localStorage is not available because --localstorage-file was not provided
 fjernes med node option
+
     --localstorage-file=./jest-storage
+
+Jest efterlader js filer, dette undgås med
+
+    NODE_OPTIONS='--experimental-vm-modules --localstorage-file=./jest-storage' jest --forceExit --detectOpenHandles
 
     
 ## 17. september 2026

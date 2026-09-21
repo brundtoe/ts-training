@@ -6,6 +6,7 @@ module.exports = {
         "./src"
     ],
     setupFilesAfterEnv: ["./jest.setup.js"],
+    extensionsToTreatAsEsm: ['.ts'],
     testMatch: [
         "**/__tests__/**/(spec|test).+(ts|tsx|js)",
         "**/?(*.)+(spec|test).+(ts|tsx|js)"

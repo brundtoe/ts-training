@@ -28,6 +28,11 @@ Fjernes med node option
 
     --localstorage-file=./jest-storage
 
+Den samlede commandline
+
+    NODE_OPTIONS='--experimental-vm-modules --localstorage-file=./jest-storage' jest --forceExit --detectOpenHandles
+
+Optionerne --foceExit og --detectOpenHandles er ndøvendiug for at tvinge jest til at standses og lukke evt open handles
 
 ## Databasen bookstore
 
