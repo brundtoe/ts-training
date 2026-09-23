@@ -31,7 +31,7 @@ export default {
             res.json(buildMessage(err, 'VALIDATION_ERROR'))
         }
     },
-    show: (req: Request, res: Response, next: NextFunction) => {
+    show: (req: IdRequest, res: Response, next: NextFunction) => {
 
         try {
             Joi.assert(req.params.id, Joi.number().integer().required().min(1))
@@ -41,7 +41,7 @@ export default {
             res.json(buildMessage(err, 'VALIDATION_ERROR'))
         }
     },
-    delete: (req: Request, res: Response, next: NextFunction) => {
+    delete: (req: IdRequest, res: Response, next: NextFunction) => {
         try {
             Joi.assert(req.params.id, Joi.number().integer().required().min(1))
             next()

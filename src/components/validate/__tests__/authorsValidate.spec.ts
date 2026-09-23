@@ -31,7 +31,7 @@ describe('Validering af author schema', () => {
             }
         }
 
-        validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.show(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(nextFunction).toHaveBeenCalledTimes(1)
         expect(mockResponse.json).not.toHaveBeenCalled()
         expect(mockResponse.status).not.toHaveBeenCalled()
@@ -57,7 +57,7 @@ describe('Validering af author schema', () => {
             }
         }
 
-        validate.show(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.show(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
         expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
@@ -73,7 +73,7 @@ describe('Validering af author schema', () => {
             }
         }
 
-        validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.delete(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(nextFunction).toHaveBeenCalledTimes(1)
         expect(mockResponse.json).not.toHaveBeenCalled()
         expect(mockResponse.status).not.toHaveBeenCalled()
@@ -98,7 +98,7 @@ describe('Validering af author schema', () => {
             }
         }
 
-        validate.delete(mockRequest as Request, mockResponse as Response, nextFunction as NextFunction)
+        validate.delete(mockRequest as IdRequest, mockResponse as Response, nextFunction as NextFunction)
         expect(mockResponse.json).toHaveBeenCalledWith(expectedResponse)
         expect(mockResponse.status).toHaveBeenCalledWith(badRequest)
         expect(nextFunction).not.toHaveBeenCalled()
