@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="Applikationen er flyttet fra mappen backend til ts-training.">
+    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="justering packags.json script test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest-storage" beforeDir="false" afterPath="$PROJECT_DIR$/jest-storage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest-storage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/jest-storage-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest-storage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/jest-storage-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="76" />
+    <option name="cachedIndexableFilesCount" value="78" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -29,23 +27,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000270461786" />
-      <entry key="MS500" value="1.0317230238367077" />
-      <entry key="S2" value="2.1395663300666126" />
-      <entry key="S5" value="5.5302151167188605" />
-      <entry key="S10" value="9.222188977736979" />
-      <entry key="S30" value="14.08777865233534" />
-      <entry key="S60" value="16.169801916796608" />
-      <entry key="M2" value="19.79636501389788" />
-      <entry key="M5" value="31.58552995085414" />
-      <entry key="M10" value="47.3019726265256" />
-      <entry key="M15" value="57.83833252812076" />
-      <entry key="M30" value="73.89295310484283" />
-      <entry key="H1" value="85.01511093427521" />
-      <entry key="H2" value="91.60314239091072" />
-      <entry key="H4" value="95.19395922336739" />
-      <entry key="D1" value="98.3501259713549" />
-      <entry key="W1" value="98.906772515833" />
+      <entry key="MS100" value="1.0009215456865233" />
+      <entry key="MS500" value="1.635667058261474" />
+      <entry key="S2" value="5.73580422682202" />
+      <entry key="S5" value="10.065418209925976" />
+      <entry key="S10" value="12.574468064848837" />
+      <entry key="S30" value="14.787618832720852" />
+      <entry key="S60" value="16.907833977503643" />
+      <entry key="M2" value="26.105322228852668" />
+      <entry key="M5" value="53.69564079928012" />
+      <entry key="M10" value="80.44929161809466" />
+      <entry key="M15" value="98.70827513327527" />
+      <entry key="M30" value="132.72380084801452" />
+      <entry key="H1" value="162.56614061938686" />
+      <entry key="H2" value="183.12472292434975" />
+      <entry key="H4" value="195.30546420039502" />
+      <entry key="D1" value="206.6035048631544" />
+      <entry key="W1" value="208.6547248806537" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -67,66 +65,67 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.4235953836360694E-8" />
-      <entry key="MS500" value="0.03778353467371244" />
-      <entry key="S2" value="1.395211034915746" />
-      <entry key="S5" value="5.099241465845483" />
-      <entry key="S10" value="8.97273213311326" />
-      <entry key="S30" value="13.995129834724112" />
-      <entry key="S60" value="16.122074221386868" />
-      <entry key="M2" value="19.771924045804305" />
-      <entry key="M5" value="31.574761523818907" />
-      <entry key="M10" value="47.29552498972914" />
-      <entry key="M15" value="57.83351155139585" />
-      <entry key="M30" value="73.89013724644286" />
-      <entry key="H1" value="85.01356247831794" />
-      <entry key="H2" value="91.60232668609115" />
-      <entry key="H4" value="95.19354009707617" />
-      <entry key="D1" value="98.35005446857534" />
-      <entry key="W1" value="98.9067622596632" />
+      <entry key="MS100" value="0.4270520604718076" />
+      <entry key="MS500" value="1.3482494647982484" />
+      <entry key="S2" value="5.502808374641232" />
+      <entry key="S5" value="9.935832406747409" />
+      <entry key="S10" value="12.501499260354981" />
+      <entry key="S30" value="14.76113476138853" />
+      <entry key="S60" value="16.893028090608603" />
+      <entry key="M2" value="26.091302056104908" />
+      <entry key="M5" value="53.67664861313957" />
+      <entry key="M10" value="80.43237220545325" />
+      <entry key="M15" value="98.69409387134561" />
+      <entry key="M30" value="132.71452086482233" />
+      <entry key="H1" value="162.56070171261914" />
+      <entry key="H2" value="183.121753818706" />
+      <entry key="H4" value="195.30390919829432" />
+      <entry key="D1" value="206.60323512280723" />
+      <entry key="W1" value="208.65468607628074" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3JdusujigiMC22UWtfhBQT7Ic9D" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Docker run.executor": "Run",
-    "Jest.Jest All Tests.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Shell Script.Docker build image.executor": "Run",
-    "Shell Script.Fjern Containere.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/projects/sourcecode/javascript/ts-training/docker-compose.yml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/home/projects/sourcecode/javascript/ts-training/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "npm.Build Prod and run.executor": "Run",
-    "npm.Build.executor": "Run",
-    "npm.Run Dev.executor": "Run",
-    "npm.Victoria test.executor": "Run",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/projects/sourcecode/javascript/ts-training/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Docker run.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Jest All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;KEY_CHAT_IN_TOOLWINDOW&quot;: &quot;false&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Shell Script.Docker build image.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Fjern Containere.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/projects/sourcecode/javascript/ts-training/docker-compose.yml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/home/projects/sourcecode/javascript/ts-training/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Build Prod and run.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Run Dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.Victoria test.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/projects/sourcecode/javascript/ts-training/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Jest.Jest All Tests">
     <configuration name="Jest All Tests" type="JavaScriptTestRunnerJest">
       <node-interpreter value="project" />
@@ -240,7 +239,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1790003476857</updated>
-      <workItem from="1790003477895" duration="2645000" />
+      <workItem from="1790003477895" duration="3249000" />
+      <workItem from="1790086735511" duration="8000" />
+      <workItem from="1790086766350" duration="1457000" />
+      <workItem from="1790148785257" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="Applikationen er flyttet fra mappen backend til ts-training.">
       <option name="closed" value="true" />
@@ -250,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790005023510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="justering packags.json script test">
+      <option name="closed" value="true" />
+      <created>1790006307330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790006307330</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +279,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Applikationen er flyttet fra mappen backend til ts-training." />
-    <option name="LAST_COMMIT_MESSAGE" value="Applikationen er flyttet fra mappen backend til ts-training." />
+    <MESSAGE value="justering packags.json script test" />
+    <option name="LAST_COMMIT_MESSAGE" value="justering packags.json script test" />
   </component>
 </project>

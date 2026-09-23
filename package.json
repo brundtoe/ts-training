@@ -7,7 +7,7 @@
     "start": "node dist/bin/www.js",
     "build-node": "rm -rf ./dist && npx tsc --build tsconfig.json ",
     "start-prod": "nodemon dist/bin/www.js",
-    "start-dev": "NODE_ENV=development ts-node --project tsconfig.json ./src/bin/www.ts",
+    "start-dev": "NODE_ENV=development tsx --watch --tsconfig tsconfig.json ./src/bin/www.ts",
     "test": "NODE_OPTIONS='--experimental-vm-modules ' jest --forceExit --detectOpenHandles"
   },
   "dependencies": {
@@ -37,11 +37,12 @@
     "jest": "~30.2",
     "nodemon": "~3.1",
     "ts-jest": "~29.4",
-    "ts-node": "~10.9",
+    "tsx": "^4.23.15",
     "typescript": "6.0.3"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
-    "unrs-resolver@1.12.2": true
+    "unrs-resolver@1.12.2": true,
+    "esbuild@0.28.2": true
   }
 }
