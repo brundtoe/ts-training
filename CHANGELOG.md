@@ -1,6 +1,8 @@
 # Changelog
 
+## 24. september 2026
 
+Fjernet ikke anvendte packages dotenv og morgan
 
 ## Tag v1.0.0 21. september 2026
 

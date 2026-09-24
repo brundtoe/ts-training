@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="justering packags.json script test">
-      <change beforePath="$PROJECT_DIR$/src/components/validate/__tests__/authorsValidate.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/validate/__tests__/authorsValidate.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/validate/authors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/validate/authors.ts" afterDir="false" />
-    </list>
+    <list default="true" id="417540af-cddb-4a74-b6a3-bfe9aceacff6" name="Changes" comment="Justeret authors validate til at anvende Request&lt;{id: string}&gt;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +122,7 @@
     &quot;ts.external.directory.path&quot;: &quot;/home/projects/sourcecode/javascript/ts-training/node_modules/typescript/lib&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.Jest All Tests">
+  <component name="RunManager" selected="npm.Run Dev">
     <configuration name="Jest All Tests" type="JavaScriptTestRunnerJest">
       <node-interpreter value="project" />
       <node-options value="--experimental-vm-modules --localstorage-file=./jest-storage" />

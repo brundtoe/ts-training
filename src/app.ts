@@ -3,7 +3,6 @@ import express from 'express';
 import cors from 'cors'
 import path from 'node:path';
 import cookieParser from 'cookie-parser';
-import logger from 'morgan';
 import * as exphbs from 'express-handlebars';
 import indexRouter from './routes';
 import fetchRouter from './routes/fetch';
@@ -22,7 +21,6 @@ app.set('view engine', '.hbs')
 
 app.use(cors())
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
