@@ -1,5 +1,10 @@
 # Changelog
 
+## 6. november 2026
+
+- Npm Update
+- gitignore opdteret så dist fjernes fra repo
+
 ## 24. september 2026
 
 Fjernet ikke anvendte packages dotenv og morgan
